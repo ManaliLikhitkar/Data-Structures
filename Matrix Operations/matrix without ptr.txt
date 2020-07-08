@@ -1,0 +1,225 @@
+/*
+ ============================================================================
+                  MATRIX OPERATIONS (WITHOUT POINTERS)
+  Assignment no. : 2
+  Roll no.       : 23333
+  Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define maxsize 10
+void input(int m[][maxsize],int r,int c);
+void display(int m[][maxsize], int r, int c);
+void add(int m1[][maxsize], int m2[][maxsize], int r1, int c1, int addn[][maxsize]);
+void sub(int m1[][maxsize], int m2[][maxsize], int r1, int c1, int subn[][maxsize]);
+void trans(int m[][maxsize],int r, int c, int transpose[][maxsize]);
+void multiply(int m1[][maxsize],int m2[][maxsize],int r1, int c1, int r2,int c2,int mul[][maxsize]);
+int saddle(int m1[][maxsize],int r1,int c1);
+int main()
+{
+		int m1[maxsize][maxsize];
+		int m2[maxsize][maxsize];
+		int r1,r2,c1,c2,choice;
+		printf("Enter the number of rows and columns of first matrix \n");
+        	scanf("%d %d",&r1,&c1);
+		printf("Enter the number of rows and columns of second matrix \n");
+			scanf("%d %d",&r2,&c2);
+	    printf("Enter the first matrix \n");
+			input(m1,r1,c1);
+		printf("Enter the second matrix \n");
+			input(m2,r2,c2);
+    do
+    {
+        printf("Enter 1 for Addition \n");
+	    printf("Enter 2 for Subtraction \n");
+	    printf("Enter 3 for Transpose \n");
+	    printf("Enter 4 for Multiplication \n");
+	    printf("Enter 5 for Saddle point \n");
+	    printf("Enter 6 to Exit \n");
+	    	scanf("%d", &choice);
+	    switch(choice)
+	    {
+	      case 1:
+	      {
+	    	  int addn[maxsize][maxsize];
+	    	  if(r1==r2 && c1==c2)
+	    	  {
+	    		  add(m1,m2,r1,c1,addn);
+	    		  display(addn,r1,c1);
+	    	  }
+	    	  else
+	    	  {
+	    		  printf("Addition cannot be performed");
+	    	  }
+	    	  break;
+	      }
+	      case 2:
+		  {
+			  int subn[maxsize][maxsize];
+			  if(r1==r2 && c1==c2)
+			  {
+				  sub(m1,m2,r1,c1,subn);
+				  display(subn,r1,c1);
+			  }
+			  else
+			  {
+				  printf("Subtraction cannot be performed");
+			  }
+			  break;
+		  }
+	      case 3:
+	      {
+	    	  int transpose[maxsize][maxsize];
+	    	  trans(m1,c1,r1,transpose);
+	    	  printf("Transpose of first matrix: \n");
+	    	  display(transpose,c1,r1);
+	    	  int transpos[maxsize][maxsize];
+			  trans(m2,c2,r2,transpos);
+			  printf("Transpose of second matrix: \n");
+			  display(transpos,c2,r2);
+	      }
+	      case 4:
+            {
+                int mul[maxsize][maxsize];
+                if(c1==r2)
+                {
+                    multiply(m1,m2,r1,c1,r2,c2,mul);
+                    display(mul,r1,c2);
+                }
+                else
+                    printf("Multiplication cannot be performed \n");
+                break;
+            }
+          case 5:
+            {
+                int a,b;
+                a=saddle(m1,r1,c1);
+                if(a==0)
+                    printf("No saddle point in first matrix \n");
+                else
+                    printf("Saddle point of first matrix is : %d \n",a);
+                b=saddle(m2,r2,c2);
+                if(b==0)
+                    printf("No saddle point in second matrix \n");
+                else
+                    printf("Saddle point of second matrix is : %d \n",b);
+                    break;
+
+            }
+	      case 6:
+              printf("THANK YOU\n");
+              break;
+          default:
+              printf("Please enter correct choice.\n");
+	    }
+    }
+    while(choice!=6);
+}
+void input(int m[][maxsize],int r,int c)
+{
+	int i, j;
+	for(i=0; i<r; i++)
+	{
+        for(j=0; j<c; j++)
+		{
+			scanf("%d", &m[i][j]);
+		}
+
+	}
+}
+void add(int m1[][maxsize], int m2[][maxsize], int r1, int c1, int addn[][maxsize])
+{
+	int i, j;
+		for(i=0; i<r1; i++)
+		{
+	        for(j=0; j<c1; j++)
+			{
+				addn[i][j]=m1[i][j]+m2[i][j];
+			}
+
+		}
+}
+void display(int m[][maxsize], int r, int c)
+{
+	int i, j;
+	for(i=0; i<r; i++)
+	{
+		printf("| ");
+		for(j=0; j<c; j++)
+		{
+			printf("%d ",m[i][j]);
+		}
+		printf("|");
+		printf("\n");
+     }
+}
+void sub(int m1[][maxsize], int m2[][maxsize], int r1, int c1, int subn[][maxsize])
+{
+	int i, j;
+			for(i=0; i<r1; i++)
+			{
+		        for(j=0; j<c1; j++)
+				{
+					subn[i][j]=m1[i][j]-m2[i][j];
+				}
+
+			}
+}
+void trans(int m[][maxsize],int r, int c, int transpose[][maxsize])
+{
+	int i, j;
+			for(i=0; i<r; i++)
+			{
+		        for(j=0; j<c; j++)
+				{
+					transpose[i][j]=m[j][i];
+				}
+
+			}
+}
+void multiply(int m1[][maxsize],int m2[][maxsize],int r1, int c1, int r2,int c2,int mul[][maxsize])
+{
+    int i,j,k;
+    for(int i=0; i<r1; i++)
+    {
+       for(int j=0; j<c2; j++)
+        {
+             mul[i][j]=0;
+           for(k=0; k<c1; k++)
+           {
+               mul[i][j]+=m1[i][k]*m2[k][j];
+           }
+        }
+    }
+}
+int saddle(int m1[][maxsize],int r1,int c1)
+{
+    int i,j,k;
+    int a,b;
+      for (int i = 0; i < r1; i++)
+      {
+          a= m1[i][0];
+          b= 0;
+          for (j = 1; j < r1; j++)
+          {
+              if (a> m1[i][j])
+              {
+                  a= m1[i][j];
+                  b= j;
+              }
+          }
+          for (k = 0; k < r1; k++)
+          {
+              if (a< m1[k][b])
+                break;
+          }
+        if (k == r1)
+        {
+           return a;
+        }
+    }
+    return 0;
+}
+

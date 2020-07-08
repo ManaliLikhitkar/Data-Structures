@@ -1,0 +1,265 @@
+/*
+ ============================================================================
+                             SPARSE MATRIX
+ Assignment no. : 8
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#define maxsize 10
+typedef struct
+{
+	int row,col,value;
+}sparse_mat;
+int create_matrix(int m[][maxsize],int r,int c);
+void display_matrix(int m[][maxsize],int r, int c);
+void create_sparse(int m[][maxsize],int r, int c, sparse_mat spar[]);
+void display_sparse(sparse_mat spar[],int n);
+void simple_transpose(sparse_mat spar[], sparse_mat st[]);
+void fast_transpose(sparse_mat a[], sparse_mat b[]);
+int addition(sparse_mat s1[],sparse_mat s2[],sparse_mat add[]);
+int main()
+{
+	int A[maxsize][maxsize],B[maxsize][maxsize];
+	int r,c,n,choice,a,r1,c1,n1;
+	sparse_mat spar[50],st[50],addn[50];
+	printf("Enter the number of rows:");  scanf("%d",&r);
+	printf("Enter the number of columns:");  scanf("%d",&c);
+	n=create_matrix(A,r,c);
+	display_matrix(A,r,c);
+	create_sparse(A,r,c,spar);
+	display_sparse(spar,n);
+	do
+	{
+		printf("\n\n1.Fast transpose.\n2.Simple transpose.\n3.Addition\n");
+		printf("Enter your choice\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		  case 1:
+			  fast_transpose(spar,st);
+			  display_sparse(st,n);
+			  break;
+		  case 2:
+			  simple_transpose(spar,st);
+			  display_sparse(st,n);
+			  break;
+		  case 3:
+			  printf("Enter second matrix\n");
+			  printf("Enter the number of rows:");
+			  scanf("%d",&r1);
+			  printf("Enter the number of columns:");
+			  scanf("%d",&c1);
+			  if(r==r1 && c==c1)
+              {
+                  n1=create_matrix(B,r1,c1);
+                  display_matrix(B,r1,c1);
+                  create_sparse(B,r1,c1,st);
+                  display_sparse(st,n);
+                  a=addition(spar,st,addn);
+                  printf("ADDITION ");
+                  display_sparse(addn,a);
+              }
+              else
+                 printf("\nAddition cannot be performed\n");
+			  break;
+		  case 4:
+			  printf("THANK YOU!!!\n");
+			  break;
+		  default:
+			  printf("Enter correct choice\n");
+		}
+	}while(choice!=4);
+}
+int create_matrix(int m[][maxsize],int r, int c)
+{
+	int n,i,j,k,max;
+	for(i=0; i<r; i++)
+	{
+		for(int j=0; j<c; j++)
+			m[i][j]=0;
+	}
+	do
+	{
+		printf("Enter the number of non-zero elements:");
+		scanf("%d",&n);
+		max=(r*c)/2;
+		if(n<=max)
+		for(i=0; i<n; i++)
+		{
+			printf("\nElement number %d\n",i+1);
+			printf("Enter the row number:");
+			scanf("%d",&j);
+			printf("Enter the column number:");
+			scanf("%d",&k);
+			if(j-1<r && k-1<c)
+			{
+				if(m[j-1][k-1]!=0)
+				{
+					printf("Enter unique element.\n");
+					i--;
+					continue;
+				}
+				else
+				{
+					printf("Enter the element:");
+					scanf("%d",&m[j-1][k-1]);
+				}
+			}
+			else
+			{
+				printf("Enter correct row and column");
+				i--;
+				continue;
+			}
+		 }
+		else
+			printf("Please enter sparse matrix\n");
+	}while(!(n<=max));
+	return n;
+}
+void display_matrix(int m[][maxsize],int r, int c)
+{
+	printf("\nMatrix is:\n");
+	int i;
+	for(i=0; i<r; i++)
+	{
+		for(int j=0; j<c; j++)
+			printf("%d\t",m[i][j]);
+		printf("\n");
+	}
+}
+void create_sparse(int A[][maxsize],int r, int c, sparse_mat spar[])
+{
+	int k=1,i,j;
+	for(i=0; i<r; i++)
+	{
+		for(j=0; j<c; j++)
+		{
+			if(A[i][j]!=0)
+			{
+				spar[k].row=i;
+				spar[k].col=j;
+				spar[k].value=A[i][j];
+				k++;
+			}
+		}
+	}
+	spar[0].row=r;
+	spar[0].col=c;
+	spar[0].value=k-1;
+}
+void display_sparse(sparse_mat spar[],int n)
+{
+	printf("SPARSE TABLE:\n");
+	printf("ROW\tCOLUMN\tVALUE\n");
+	int i;
+	for(i=0; i<n+1; i++)
+	{
+		printf("%d\t%d\t%d\n",spar[i].row+1,spar[i].col+1,spar[i].value);
+	}
+}
+void simple_transpose(sparse_mat spar[], sparse_mat st[])
+{
+	int n,i,j,currentb;
+	n=spar[0].value;
+	st[0].row=spar[0].col;
+	st[0].col=spar[0].row;
+	st[0].value=n;
+	if(n>0)
+	{
+		currentb=1;
+		for(i=0; i<spar[0].col; i++)
+			for(j=0; j<=n;j++)
+				if(spar[j].col==i)
+				{
+					st[currentb].row=spar[j].col;
+					st[currentb].col=spar[j].row;
+					st[currentb].value=spar[j].value;
+					currentb++;
+				}
+	}
+}
+void fast_transpose(sparse_mat a[], sparse_mat b[])
+{
+	int row_terms[maxsize],starting_pos[maxsize];
+	int i,j,num_cols,num_terms;
+	num_cols=a[0].col;
+	num_terms=a[0].value;
+	b[0].row=num_cols;
+	b[0].col=a[0].row;
+	b[0].value=num_terms;
+	if(num_terms>0)
+	{
+		for(i=0; i<num_cols; i++)
+			row_terms[i]=0;
+		for(i=1;i<=num_terms;i++)
+			row_terms[a[i].col]++;
+		starting_pos[0]=1;
+		for(i=1;i<num_cols;i++)
+			starting_pos[i]=starting_pos[i-1]+row_terms[i-1];
+		for(i=1; i<=num_terms; i++)
+		{
+			j=starting_pos[a[i].col]++;
+			b[j].row=a[i].col;
+			b[j].col=a[i].row;
+			b[j].value=a[i].value;
+		}
+	}
+
+}
+int addition(sparse_mat s1[],sparse_mat s2[],sparse_mat add[])
+{
+	int i=1,j=1,k=1;
+	add[0].row=s1[0].row;
+	add[0].col=s1[0].col;
+		while(i<=s1[0].value && j<=s2[0].value)
+		{
+			if(s1[i].row==s2[j].row && s1[i].col==s2[j].col)
+			{
+				add[k].row=s1[i].row;
+				add[k].col=s1[i].col;
+				add[k].value=s1[i].value+s2[j].value;
+				i++,k++,j++;
+			}
+			else if(s1[i].row==s2[j].row && s1[i].col<s2[j].col)
+			{
+				add[k].row=s1[i].row;
+				add[k].col=s1[i].col;
+				add[k].value=s1[i].value;
+				k++,i++;
+			}
+			else if(s1[i].row==s2[j].row && s1[i].col>s2[j].col)
+			{
+
+				add[k].row=s2[j].row;
+				add[k].col=s2[j].col;
+				add[k].value=s2[j].value;
+				j++,k++;
+			}
+			else if(s1[i].row<s2[j].row)
+			{
+				add[k]=s1[i];
+				i++,k++;
+			}
+			else if(s1[i].row>s2[j].row)
+			{
+				add[k]=s2[j];
+				k++,j++;
+			}
+		}
+		while(i<=s1[0].value)
+		{
+			add[k]=s1[i];
+			i++,k++;
+		}
+		while(j<=s2[0].value)
+		{
+			add[k]=s2[j];
+			j++,k++;
+		}
+		add[0].value=k-1;
+		return k-1;
+}

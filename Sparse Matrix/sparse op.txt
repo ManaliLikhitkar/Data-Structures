@@ -1,0 +1,103 @@
+Enter the number of rows:2
+Enter the number of columns:2
+Enter the number of non-zero elements:2
+
+Element number 1
+Enter the row number:1
+Enter the column number:1
+Enter the element:4
+
+Element number 2
+Enter the row number:1
+Enter the column number:2
+Enter the element:4
+
+Matrix is:
+4       4
+0       0
+SPARSE TABLE:
+ROW     COLUMN  VALUE
+3       3       2
+1       1       4
+1       2       4
+
+
+1.Fast transpose.
+2.Simple transpose.
+3.Addition
+Enter your choice
+1
+SPARSE TABLE:
+ROW     COLUMN  VALUE
+3       3       2
+1       1       4
+2       1       4
+
+
+1.Fast transpose.
+2.Simple transpose.
+3.Addition
+Enter your choice
+2
+SPARSE TABLE:
+ROW     COLUMN  VALUE
+3       3       2
+1       1       4
+2       1       4
+
+
+1.Fast transpose.
+2.Simple transpose.
+3.Addition
+Enter your choice
+3
+Enter second matrix
+Enter the number of rows:2
+Enter the number of columns:3
+
+Addition cannot be performed
+
+
+1.Fast transpose.
+2.Simple transpose.
+3.Addition
+Enter your choice
+3
+Enter second matrix
+Enter the number of rows:2
+Enter the number of columns:2
+Enter the number of non-zero elements:4
+Please enter sparse matrix
+Enter the number of non-zero elements:2
+
+Element number 1
+Enter the row number:2
+Enter the column number:1
+Enter the element:5
+
+Element number 2
+Enter the row number:2
+Enter the column number:2
+Enter the element:7
+
+Matrix is:
+0       0
+5       7
+SPARSE TABLE:
+ROW     COLUMN  VALUE
+3       3       2
+2       1       5
+2       2       7
+ADDITION SPARSE TABLE:
+ROW     COLUMN  VALUE
+3       3       4
+1       1       4
+1       2       4
+2       1       5
+2       2       7
+
+
+1.Fast transpose.
+2.Simple transpose.
+3.Addition
+Enter your choice

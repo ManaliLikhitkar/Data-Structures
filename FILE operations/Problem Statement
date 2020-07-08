@@ -1,0 +1,9 @@
+a) Write C program to implement TYPE and COPY commands of DOS
+using command line arguments.
+b) Implement sequential file and perform following operations on any
+database:
+i. Display
+ii. Add records
+iii. Search record
+iv. Modify record
+v. Delete record

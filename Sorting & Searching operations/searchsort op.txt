@@ -1,0 +1,111 @@
+Enter total number of records
+3
+Enter the roll number,name and percentage
+3
+c
+50
+Enter the roll number,name and percentage
+1
+a
+40
+Enter the roll number,name and percentage
+2
+b
+60
+1.Bubble Sort
+2.Selection Sort
+3.Binary Search
+4.Exit
+Enter your choice
+1
+Pass no. 1
+NO. OF COMPARISONS: 2
+NO. OF SWAP: 1
+1       a       40.000000
+3       c       50.000000
+2       b       60.000000
+
+
+Pass no. 2
+NO. OF COMPARISONS: 1
+NO. OF SWAP: 1
+1       a       40.000000
+2       b       60.000000
+3       c       50.000000
+
+
+1.Bubble Sort
+2.Selection Sort
+3.Binary Search
+4.Exit
+Enter your choice
+2
+Pass no. 1
+NO. OF COMPARISONS: 3
+NO. OF SWAP: 0
+3       c       50.000000
+1       a       40.000000
+2       b       60.000000
+
+
+Pass no. 2
+NO. OF COMPARISONS: 2
+NO. OF SWAP: 0
+3       c       50.000000
+2       b       60.000000
+1       a       40.000000
+
+
+Pass no. 3
+NO. OF COMPARISONS: 1
+NO. OF SWAP: 0
+3       c       50.000000
+2       b       60.000000
+1       a       40.000000
+
+
+1.Bubble Sort
+2.Selection Sort
+3.Binary Search
+4.Exit
+Enter your choice
+3
+Enter the roll number to be searched
+2
+1.Recursive
+2.Non-Recursive
+1
+
+
+
+
+Left    Middle  Right
+0       1       2       Found
+
+
+2       b       60.000000
+1.Bubble Sort
+2.Selection Sort
+3.Binary Search
+4.Exit
+Enter your choice
+3
+Enter the roll number to be searched
+2
+1.Recursive
+2.Non-Recursive
+2
+
+
+Left    Middle  Right
+0       1       2       Found
+
+
+2       b       60.000000
+1.Bubble Sort
+2.Selection Sort
+3.Binary Search
+4.Exit
+Enter your choice
+4
+THANK YOU

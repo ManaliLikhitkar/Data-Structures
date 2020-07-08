@@ -1,0 +1,155 @@
+
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+1
+Enter the number of elements in the list
+5
+Enter data
+1
+Enter data
+2
+Enter data
+3
+Enter data
+4
+Enter data
+5
+
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+2
+
+1.Serially
+2.Reverse
+1
+1 -> 2 -> 3 -> 4 -> 5
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+3
+
+1.Beginning
+2.End
+3.Other
+4.End
+1
+Enter data
+1
+
+1.Beginning
+2.End
+3.Other
+4.End
+2
+Enter data
+6
+
+1.Beginning
+2.End
+3.Other
+4.End
+3
+Enter data after which you want to insert a new node
+3
+Enter data
+7
+
+1.Beginning
+2.End
+3.Other
+4.End
+4
+
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+2
+
+1.Serially
+2.Reverse
+1
+1 -> 1 -> 2 -> 3 -> 7 -> 4 -> 5 -> 6
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+4
+Enter the node to be deleted
+1
+
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+2
+
+1.Serially
+2.Reverse
+1
+1 -> 2 -> 3 -> 7 -> 4 -> 5 -> 6
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+2
+
+1.Serially
+2.Reverse
+2
+6 -> 5 -> 4 -> 7 -> 3 -> 2 -> 1 ->
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+5
+
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit
+2
+
+1.Serially
+2.Reverse
+1
+6 -> 5 -> 4 -> 7 -> 3 -> 2 -> 1
+Enter your choice
+1.Create list.
+2.Display list.
+3.Insert.
+4.Delete
+5.Reverse the list.
+6.Exit

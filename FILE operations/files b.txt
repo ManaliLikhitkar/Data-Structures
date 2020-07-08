@@ -1,0 +1,223 @@
+/*
+ ============================================================================
+                              FILES
+ Assignment no. : 5
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct
+{
+	int day,month,year;
+}date;
+typedef struct
+{
+	date d;
+	int AccNo;
+	char AccType[10];
+	char name[20];
+	char ph[11];
+	int balance;
+}BankAcc;
+void create(BankAcc b,int total);
+void display(BankAcc D);
+void add(BankAcc b,int total);
+int search(BankAcc b,int n);
+void update(BankAcc D,int n);
+void delete(BankAcc D,int n);
+int main()
+{
+	int choice,n,f,total;
+	BankAcc b,D;
+	printf("Enter total no. of records\n");
+	scanf("%d",&total);
+	if(total!=0)
+		create(b,total);
+	do
+	{
+		printf("1. Display records \n");
+		printf("2. Add record \n");
+		printf("3. Search record \n");
+		printf("4. Update record \n");
+		printf("5. Delete record \n");
+		printf("6. Exit \n");
+		printf("Enter your choice \n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		  case 1:
+				 display(D);
+				 break;
+		  case 2:
+				 add(b,total);
+				 total++;
+				 break;
+		  case 3:
+				 printf("Enter the account number to be searched \n");
+				 scanf("%d", &n);
+				 f=search(b,n);
+				 if(f==-1)
+					 printf("Record not found \n");
+				 else
+					 printf("Record found \n");
+				 break;
+		  case 4:
+				 printf("Enter the account number whose record is to be modified \n");
+				 scanf("%d", &n);
+				 f=search(b,n);
+				 if(f==-1)
+					 printf("Record not found \n");
+				 else
+					 update(b,n);
+					 printf("Updated successfully\n");
+				 break;
+		  case 5:
+				  printf("Enter the account number whose record is to be deleted \n");
+				  scanf("%d",&n);
+				  f=search(b,n);
+				 if(f==-1)
+					 printf("Record not found \n");
+				 else
+				 {
+					 delete(b,n);
+					 printf("Deleted successfully\n");
+					 total--;
+				 }
+				  break;
+		  case 6:
+				 printf("THANK YOU \n");
+				 break;
+          default:
+                 printf("Enter correct number\n");
+		}
+	}while(choice!=6);
+   return 0;
+}
+void create(BankAcc b,int total)
+{
+	int i,accno;
+	accno=1001;
+	FILE *fp;
+	fp=fopen("BankAccount.bin","w+");
+	if(fp==NULL)
+	{
+		exit(0);
+	}
+	for(i=0; i<total; i++)
+	{
+		b.AccNo=accno;
+		printf("Enter the account holder name,phone number,account type,account balance,opening date \n");
+		scanf("\n");
+		gets(b.name);
+		gets(b.ph);
+	    gets(b.AccType);
+	    scanf("%d",&b.balance);
+		scanf("%d",&b.d.day);
+		scanf("%d",&b.d.month);
+		scanf("%d",&b.d.year);
+
+        fwrite(&b,sizeof(BankAcc),1,fp);
+        accno++;
+    }
+	fclose(fp);
+}
+void display(BankAcc D)
+{
+	FILE *fp;
+	fp=fopen("BankAccount.bin","r");
+	if(fp==NULL)
+		exit(0);
+	while(fread(&D,sizeof(BankAcc),1,fp)==1)
+	{
+		printf("%d \t\t\t %s \t\t %s \t\t\t %s \t\t\t %d \t\t\t %d/%d/%d \n", D.AccNo,D.name, D.ph, D.AccType, D.balance, D.d.day,D.d.month,D.d.year);
+	}
+	fclose(fp);
+}
+void add(BankAcc b,int total)
+{
+	int accno;
+	FILE *fp;
+	fp=fopen("BankAccount.bin","r");
+	while(fread(&b,sizeof(BankAcc),1,fp)==1)
+	{
+				accno=b.AccNo;
+	}
+	fclose(fp);
+	fp=fopen("BankAccount.bin","a");
+	printf("Enter the account holder name,phone number,account type,account balance ,opening date\n");
+	scanf("\n");
+	b.AccNo=accno+1;
+	gets(b.name);
+	gets(b.ph);
+	gets(b.AccType);
+	scanf("%d",&b.balance);
+	scanf("%d",&b.d.day);
+	scanf("%d",&b.d.month);
+	scanf("%d",&b.d.year);
+    fwrite(&b,sizeof(BankAcc),1,fp);
+    fclose(fp);
+}
+int search(BankAcc D,int n)
+{
+	FILE *fp;
+	fp=fopen("BankAccount.bin","r");
+	while(fread(&D,sizeof(BankAcc),1,fp)==1)
+	{
+		if(D.AccNo==n)
+			return 1;
+	}
+	return -1;
+}
+void update(BankAcc D,int n)
+{
+	FILE *fp;
+	fp=fopen("BankAccount.bin","r+");
+	FILE *fp1;
+	fp1=fopen("BankAcc.bin","w+");
+	while(fread(&D,sizeof(BankAcc),1,fp)==1)
+	{
+	     if(D.AccNo!=n)
+	     {
+	        fwrite(&D,sizeof(BankAcc),1,fp1);
+	     }
+	     else
+	     {
+	    	 D.AccNo=n;
+			 printf("Enter the new account holder name,phone number,account type,account balance,opening date \n");
+			 scanf("\n");
+		     gets(D.name);
+			 gets(D.ph);
+			 gets(D.AccType);
+			 scanf("%d",&D.balance);
+			 scanf("%d",&D.d.day);
+			 scanf("%d",&D.d.month);
+			 scanf("%d",&D.d.year);
+             fwrite(&D,sizeof(BankAcc),1,fp1);
+	     }
+	}
+	fclose(fp);
+	fclose(fp1);
+	 remove("BankAccount.bin");
+	 rename("BankAcc.bin","BankAccount.bin");
+}
+void delete(BankAcc D,int n)
+{
+    FILE *fp;
+	fp=fopen("BankAccount.bin","r+");
+	FILE *fp1;
+	fp1=fopen("BankAcc.bin","w+");
+	while(fread(&D,sizeof(BankAcc),1,fp)==1)
+	{
+        if(D.AccNo!=n)
+        {
+           fwrite(&D,sizeof(BankAcc),1,fp1);
+        }
+	}
+	fclose(fp);
+	fclose(fp1);
+	 remove("BankAccount.bin");
+	 rename("BankAcc.bin","BankAccount.bin");
+}

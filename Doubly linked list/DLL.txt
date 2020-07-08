@@ -1,0 +1,280 @@
+/*
+ ============================================================================
+                     Doubly Linked List
+ Assignment no. : 10
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef struct
+{
+	char data;
+	struct node *prev;
+	struct node *next;
+}node;
+node * getnode()
+{
+	node *temp;
+	temp=(node *)malloc(sizeof(node));
+	temp->prev=NULL;
+	temp->next=NULL;
+	return temp;
+}
+node * create(node *head)
+{
+	node *temp, *t;
+	char str[20];
+	int i=0;
+	printf("\n\nEnter the string: ");
+	scanf("\n");
+	gets(str);
+	if(head==NULL)
+		head=temp;
+	t=head;
+	for(i=0; i<strlen(str); i++)
+	{
+	    t->data=str[i];
+	    if(i<strlen(str)-1)
+        {
+            temp=getnode();
+            t->next=temp;
+            temp->prev=t;
+            t=t->next;
+        }
+	}
+	t->next=NULL;
+	return head;
+}
+void display(node *head)
+{
+	node *t;
+	t=head;
+	printf("\n\n");
+	while(t->next!=NULL)
+	{
+	    printf("%c -> ",t->data);
+		t=t->next;
+	}
+    printf("%c\n\n",t->data);
+}
+void display_reverse(node *head)
+{
+	node *temp;
+	temp=head;
+	printf("\n\n");
+	while(temp->next!=NULL)
+		temp=temp->next;
+	while(temp->prev!=NULL)
+	{
+		printf("%c -> ",temp->data);
+		temp=temp->prev;
+	}
+	printf("%c\n\n",temp->data);
+}
+node * insert_beg(node *head,char ch)
+{
+    node *temp;
+    temp=getnode();
+    temp->data=ch;
+    temp->next=head;
+    head->prev=temp;
+    head=temp;
+    return head;
+}
+void insert_end(node *head,char ch)
+{
+    node *temp ,*t1;
+    t1=getnode();
+    temp=head;
+    while(temp->next!=NULL)
+        temp=temp->next;
+    temp->next=t1;
+    t1->prev=temp;
+    t1->data=ch;
+}
+void insert(node *head,char ch)
+{
+    char c;
+    node *temp ,*t1,*t2;
+    t1=getnode();
+    temp=head;
+    printf("Enter the data after which you want to insert new node: ");
+    scanf("\n");
+    scanf("%c",&c);
+    while(temp->data!=c && temp->next!=NULL)
+        temp=temp->next;
+        if(temp->data==c)
+        {
+           t2=temp->next;
+            temp->next=t1;
+            t2->prev=t1;
+            t1->prev=temp;
+            t1->data=ch;
+            t1->next=t2;
+        }
+        else
+            printf("Data not found!!\n\n");
+}
+node * delete(node *head)
+{
+    char ch;
+    int count=0;
+    node *t1,*t2,*temp=head;
+    printf("Enter the data to be deleted : ");
+    scanf("\n");
+    scanf("%c",&ch);
+    if(temp->next!=NULL)
+    while(temp->next!=NULL)
+    {
+       while(temp->data!=ch && temp->next!=NULL)
+          temp=temp->next;
+          if(temp->data==ch)
+          {
+             count++;
+             if(temp->prev==NULL)
+             {
+                temp->data=NULL;
+                temp=temp->next;
+                head=temp;
+                head->prev=NULL;
+                temp=head;
+             }
+            else if(temp->next==NULL)
+            {
+                t1=temp->prev;
+                temp->data=NULL;
+                temp->prev=NULL;
+                t1->next=NULL;
+                temp=t1;
+            }
+            else
+            {
+                t1=temp->prev;
+                t2=temp->next;
+                t2->prev=t1;
+                t1->next=t2;
+                free(temp);
+                temp=t2;
+            }
+          }
+          else
+            break;
+    }
+    else
+    {
+        free(temp);
+        count++;
+        head=NULL;
+    }
+    if(count==0)
+        printf("Data not found!!\n\n");
+    return head;
+}
+node * reverse(node *head)
+{
+    node *temp,*t1,*t2;
+    temp=head;
+    if(temp->next!=NULL)
+    {
+        while(temp->next!=NULL)
+            temp=temp->next;
+        t1=temp->prev;
+        temp->prev=NULL;
+        temp->next=t1;
+        head=temp;
+        t2=head;
+        temp=temp->next;
+        while(temp!=NULL)
+        {
+            t1=temp->prev;
+            temp->prev=t2;
+            temp->next=t1;
+            t2=temp;
+            temp=temp->next;
+        }
+        return head;
+    }
+    else
+        return head;
+}
+int main(void)
+{
+   int choice;
+   node *head;
+   head=getnode();
+   do
+   {
+      printf("\n\n1.Create list.\n2.Display list.\n3.Insert node.\n4.Delete node.\n5.Reverse list.\n6.Exit.\nEnter your choice:");
+      scanf("%d",&choice);
+      switch(choice)
+      {
+        case 1:
+            create(head);
+            break;
+        case 2:
+             {
+                 int ch;
+                 if(head==NULL)
+                    printf("EMPTY LIST!!\n\n");
+                 else
+                 {
+                    printf("\n1.Serially.\n2.Reverse.\nEnter your choice:");
+                     scanf("%d",&ch);
+                     switch(ch)
+                     {
+                     case 1:
+                            display(head);
+                            break;
+                     case 2:
+                            display_reverse(head);
+                            break;
+                     }
+                 }
+                 break;
+             }
+         case 3:
+               {
+                  int ch;
+                  char c;
+                  printf("Enter the character to be inserted : ");
+                  scanf("\n");
+                  scanf("%c",&c);
+                  do
+                  {
+                      printf("\n1.Beginning.\n2.End.\n3.Other\n4.Stop.\nEnter your choice:");
+                      scanf("%d",&ch);
+                      switch(ch)
+                      {
+                      case 1:
+                            head=insert_beg(head,c);
+                            break;
+                      case 2:
+                            insert_end(head,c);
+                            break;
+                      case 3:
+                            insert(head,c);
+                            break;
+                      }
+                  }while(ch!=4);
+               }
+               break;
+         case 4:
+               if(head==NULL)
+                printf("EMPTY LIST!!\n\n");
+               else
+                head=delete(head);
+               break;
+         case 5:
+               head=reverse(head);
+               break;
+         case 6:
+               printf("\n\nTHANK YOU!!\n");
+               break;
+      }
+   }while(choice!=6);
+   return 0;
+}

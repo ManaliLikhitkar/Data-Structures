@@ -1,0 +1,224 @@
+/*
+ ============================================================================
+                               Structures
+Assignment no. : 4
+Roll no.       : 23333
+Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct
+{
+	int day,month,year;
+}date;
+typedef struct
+{
+	date d;
+	int AccNo;
+	char AccType[10];
+	char name[20];
+	char ph[11];
+	int balance;
+	int flag;
+}BankAcc;
+void create(BankAcc B[100],int total);
+void display(BankAcc B[100], int total,int a);
+void add(BankAcc B[100], int a);
+int search(BankAcc B[100], int total,int n);
+void phydel(BankAcc B[100], int total,int no);
+void logdel(BankAcc B[100], int total, int no);
+int main()
+{
+	int choice,total;
+	int n,f,b,no,ch;
+	int a=0;
+	BankAcc B[100];
+	printf("Enter the number of records \n");
+	scanf("%d",&total);
+	create(B,total);
+	do
+	{
+        printf("1. Display records \n");
+		printf("2. Add record \n");
+		printf("3. Search record \n");
+		printf("4. Update record \n");
+		printf("5. Delete record \n");
+		printf("6. Exit \n");
+		printf("Enter your choice \n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		  case 1:
+			     display(B,total,a);
+			     break;
+		  case 2:
+			     add(B,total);
+			     ++total;
+		  	     break;
+		  case 3:
+			     printf("Enter the account number to be searched \n");
+			     scanf("%d", &n);
+			     f=search(B,total,n);
+			     if(f==-1)
+			    	 printf("Record not found \n");
+			     else
+			     {
+			    	 b=f+1;
+			    	 printf("Record found \n");
+			    	 display(B,b,f);
+			     }
+				 break;
+		  case 4:
+			     printf("Enter the account number whose record is to be modified \n");
+			     scanf("%d", &n);
+			     f=search(B,total,n);
+			     if(f==-1)
+			     	 printf("Record not found \n");
+			     else
+			     {
+			    	 printf("Enter the new account balance \n");
+			    	 scanf("%d",&B[f].balance);
+			     }
+
+				 break;
+		  case 5:
+			     printf("1. Physical deletion \n");
+			     printf("2. Logical deletion \n");
+			     printf("Enter your choice \n");
+			     scanf("%d",&ch);
+			     switch(ch)
+			     {
+			        case 1:
+			        	  printf("Enter the account number whose record is to be deleted \n");
+			        	  scanf("%d",&no);
+			        	  phydel(B,total,no);
+			        	  total--;
+			        	  break;
+			        case 2:
+			        	  printf("Enter the account number whose record is to be deleted \n");
+					      scanf("%d",&no);
+					      logdel(B,total,no);
+			        	  break;
+			     }
+				 break;
+		  case 6:
+			     printf("THANK YOU \n");
+				 break;
+		}
+	}while(choice!=6);
+}
+void create(BankAcc B[100],int total)
+{
+	int i;
+	int accno=1001;
+	for(i=0; i<total; i++)
+    	{
+		   B[i].AccNo=accno;
+    	   printf("Enter the account holder name,phone number,account type,account balance,opening date \n");
+    	   scanf("\n");
+    	   gets(B[i].name);
+    	   gets(B[i].ph);
+    	   gets(B[i].AccType);
+    	   scanf("%d",&(B[i].balance));
+           scanf("%d",&B[i].d.day);
+    	   scanf("%d",&B[i].d.month);
+    	   scanf("%d",&B[i].d.year);
+    	   B[i].flag=1;
+    	   accno++;
+    	   if((B[i].d.day<=0 || B[i].d.day>31) || (B[i].d.month<1 || B[i].d.month >12) || (B[i].d.year>18))
+    	   {
+    		   printf("Enter correct data \n");
+    		   i--;
+    		   accno--;
+    	   }
+    	}
+}
+void display(BankAcc B[100], int total,int a)
+{
+	printf("Acc. No. \t\t Name \t\t Phone no. \t\t Account type \t\t Balance \t\t Opening Date \n");
+	int i;
+	for(i=a; i<total; i++)
+	{
+		printf("\n");
+		if(B[i].flag==1)
+		  printf("%d \t\t\t %s \t\t %s \t\t\t %s \t\t\t %d \t\t\t %d/%d/%d \n", B[i].AccNo,B[i].name, B[i].ph, B[i].AccType, B[i].balance, B[i].d.day,B[i].d.month,B[i].d.year);
+		else
+			continue;
+	}
+
+}
+void add(BankAcc B[100], int a)
+{
+	int b,i;
+	b=1001+a;
+	//for(i=0; i<1; i++)
+	//{
+	 B[a].AccNo=b;
+	 printf("Enter the account holder name,phone number,account type,account balance,opening date \n");
+	 scanf("\n");
+     gets(B[a].name);
+	 gets(B[a].ph);
+	 gets(B[a].AccType);
+	 scanf("%d",&(B[a].balance));
+	 scanf("%d",&B[a].d.day);
+	 scanf("%d",&B[a].d.month);
+	 scanf("%d",&B[a].d.year);
+	 B[a].flag=1;
+	  /*if((B[a].d.day<=0 || B[a].d.day>31) || (B[a].d.month<1 || B[a].d.month >12) || (B[a].d.year>18))
+	   {
+		   printf("Enter correct data \n");
+		   i--;
+		   continue;
+	   }*/
+	//}
+}
+int search(BankAcc B[100], int total,int n)
+{
+	int i;
+	for(i=0; i<total; i++)
+	{
+		if(n==(B[i].AccNo))
+		{
+			return i;
+			break;
+		}
+		else
+			continue;
+	}
+	return -1;
+}
+void phydel(BankAcc B[100], int total,int no)
+{
+	int i,s;
+	s=search(B,total,no);
+	if(s==-1)
+		printf("Record not found \n");
+	else
+	{
+		for(i=s; i<total; i++)
+		{
+			B[i].AccNo=B[i+1].AccNo;
+			strcpy(B[i+1].name,B[i].name);
+			strcpy(B[i].ph,B[i+1].ph);
+			strcpy(B[i].AccType,B[i+1].AccType);
+			B[i].balance=B[i+1].balance;
+			B[i].d.day=B[i+1].d.day;
+			B[i].d.month=B[i+1].d.month;
+			B[i].d.year=B[i+1].d.year;
+		}
+		printf("Deleted successfully \n");
+	}
+}
+void logdel(BankAcc B[100], int total, int no)
+{
+	int s;
+	s=search(B,total,no);
+	if(s==-1)
+	   printf("Record not found \n");
+	else
+		B[s].flag=0;
+}
+
+

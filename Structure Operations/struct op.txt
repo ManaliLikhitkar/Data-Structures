@@ -1,0 +1,197 @@
+Enter the number of records 
+   3
+Enter the account holder name,phone number,account type,account balance,opening date 
+   a
+   8796300265
+   rd
+   20000
+   12
+   3
+   15
+Enter the account holder name,phone number,account type,account balance,opening date 
+   b
+   9422046643
+   fd
+   21000
+   12
+   30
+   15
+Enter correct data 
+Enter the account holder name,phone number,account type,account balance,opening date 
+   b
+   9422046643
+   fd
+   21000
+   12
+   3
+   15
+Enter the account holder name,phone number,account type,account balance,opening date 
+   c
+   9881544332
+   rd
+   22000
+   12
+   3
+   15
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+   1
+Acc. No. 		 Name 		 Phone no. 		 Account type 		 Balance 		 Opening Date 
+
+1001 			 a 		 8796300265 			 rd 			 20000 			 12/3/15 
+
+1002 			 b 		 9422046643 			 fd 			 21000 			 12/3/15 
+
+1003 			 c 		 9881544332 			 rd 			 22000 			 12/3/15 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+   2
+Enter the account holder name,phone number,account type,account balance,opening date 
+   d
+   7843076900
+   rd
+   30000
+   13
+   4
+   16
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+   1
+Acc. No. 		 Name 		 Phone no. 		 Account type 		        Balance 	     Opening Date 
+
+1001 			 a 		 8796300265 			 rd 			 20000 			 12/3/15 
+
+1002 			 b 		 9422046643 			 fd 			 21000 			 12/3/15 
+
+1003 			 c 		 9881544332 			 rd 			 22000 			 12/3/15 
+
+1004                     d               7843076900                      rd                      30000                   13/4/16
+
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    4
+Enter the account number whose record is to be modified 
+    1001
+Enter the new account balance 
+    21000
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    1
+Acc. No. 		 Name 		 Phone no. 		 Account type 		        Balance 	      Opening Date 
+
+1001 			 a 		 8796300265 			 rd 			 21000 			 12/3/15 
+
+1002 			 b 		 9422046643 			 fd 			 21000 			 12/3/15 
+
+1003 			 c 		 9881544332 			 rd 			 22000 			 12/3/15 
+
+1004                     d               7843076900                      rd                      30000                   13/4/16
+
+
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    3
+Enter the account number to be searched 
+   1001
+Record found 
+Acc. No. 		 Name 		 Phone no. 		 Account type 		 Balance 		 Opening Date 
+
+1001 			 a 		 8796300265 			 rd 			 21000 			 12/3/15 
+
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+5
+1. Physical deletion 
+2. Logical deletion 
+Enter your choice 
+    1
+Enter the account number whose record is to be deleted 
+    1001
+Deleted successfully
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    1
+Acc. No. 		 Name 		 Phone no. 		 Account type 		 Balance 		 Opening Date 
+
+1002 			 a 		 9422046643 			 fd 			 21000 			 12/3/15 
+
+1003 			 a 		 9881544332 			 rd 			 22000 			 12/3/15 
+
+1004 			 a 		 7843076900 			 rd 			 30000 			 13/4/16 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    5
+1. Physical deletion 
+2. Logical deletion 
+Enter your choice 
+    2
+Enter the account number whose record is to be deleted 
+    1002
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    1
+Acc. No. 		 Name 		 Phone no. 		 Account type 		 Balance 		 Opening Date 
+
+
+1003 			 a 		 9881544332 			 rd 			 22000 			 12/3/15 
+
+1004 			 a 		 7843076900 			 rd 			 30000 			 13/4/16 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+    6
+THANK YOU 

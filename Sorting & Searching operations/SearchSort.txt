@@ -1,0 +1,213 @@
+/*
+ ============================================================================
+                Bubble Sort, Selection Sort, Binary Search
+ Assignment no.    : 6
+ Roll no.          : 23333
+ Batch             : F11
+ ============================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+typedef struct
+{
+	int roll_no;
+	char name[20];
+	float per;
+}student;
+void display(student s[],int total);
+void swap(int first,int second,student s[]);
+void bubble_sort(student s[],int total,int dec);
+void selection_sort(student s[],int total);
+int binary_search(student s[],int total,int n);
+int recbinary(student s[], int left, int right,int total,int n);
+int main()
+{
+   int i,total,choice,n,ser,ch;
+   student s[100];
+   printf("Enter total number of records\n");
+   scanf("%d",&total);
+   for(i=0; i<total; i++)
+   {
+	   printf("Enter the roll number,name and percentage\n");
+	   scanf("%d%s%f",&s[i].roll_no,s[i].name,&s[i].per);
+   }
+   do
+   {
+	   printf("1.Bubble Sort\n2.Selection Sort\n3.Binary Search\n4.Exit\n");
+	   printf("Enter your choice\n");
+	   scanf("%d",&choice);
+	   switch(choice)
+	   {
+	      case 1:
+	    	    bubble_sort(s,total,1);
+		        break;
+	      case 2:
+	    	    selection_sort(s,total);
+	    	    break;
+	      case 3:
+	    	    printf("Enter the roll number to be searched\n");
+	    	    scanf("%d",&n);
+	    	    printf("1.Recursive\n2.Non-Recursive\n");
+	    	    scanf("%d",&ch);
+	    	    switch(ch)
+	    	    {
+	    	    	case 1:
+	    	    		bubble_sort(s,total,0);
+	    	    		ser=recbinary(s,0,total-1,total,n);
+	    	    		if(ser==-1)
+							printf("Record not found\n");
+						else
+							printf("%d\t%s\t%f\n",s[ser].roll_no,s[ser].name,s[ser].per);
+	    	    		break;
+	    	    	case 2:
+	    	    		ser=binary_search(s,total,n);
+						if(ser==-1)
+							printf("Record not found\n");
+						else
+							printf("%d\t%s\t%f\n",s[ser].roll_no,s[ser].name,s[ser].per);
+						break;
+	    	    }
+	    	    break;
+	      case 4:
+	    	    printf("THANK YOU\n");
+	    	    break;
+	      default:
+	    	    printf("Enter correct choice\n");
+	   }
+   } while(choice!=4);
+   return 0;
+}
+void display(student s[],int total)
+{
+	int i;
+	for(i=0; i<total; i++)
+		printf("%d\t%s\t%f\n",s[i].roll_no,s[i].name,s[i].per);
+}
+void bubble_sort(student s[],int total,int dec)
+{
+	int last,flag,i,j,count,comp;
+	last=total-1;
+	flag=0;
+	for(i=0; i<last && !flag; i++)
+	{
+		flag=1;
+		if(dec==1)
+		  printf("Pass no. %d\n",i+1);
+		count=0;
+		comp=0;
+		for(j=last; j>i; j--)
+		{
+			if(s[j-1].roll_no>s[j].roll_no)
+			{
+				swap(j-1,j,s);
+				count++;
+				flag=0;
+			}
+			comp++;
+		}
+		if(dec==1)
+		{
+			printf("NO. OF COMPARISONS: %d\n",comp);
+			printf("NO. OF SWAP: %d\n",count);
+		    display(s,total);
+		}
+		printf("\n\n");
+	}
+}
+void selection_sort(student s[],int total)
+{
+	int i,j,k,count=0,comp=0,flag=0;
+	char temp[20];
+	for(i=0; i<total && !flag;i++)
+	{
+		flag=1;
+		printf("Pass no. %d\n",i+1);
+		count=0;
+		comp=0;
+		strcpy(temp,s[i].name);
+		for(j=i; j<total; j++)
+		{
+			if(strcmp(temp,s[j].name)<0)
+			{
+				strcpy(temp,s[j].name);
+				k=j;
+				flag=0;
+			}
+			comp++;
+		}
+		if(strcmp(s[i].name,temp)!=0)
+           	{
+            		swap(i,k,s);
+            		count++;
+           	}
+		printf("NO. OF COMPARISONS: %d\n",comp);
+		printf("NO. OF SWAP: %d\n",count);
+		display(s,total);
+		printf("\n\n");
+	}
+}
+int binary_search(student s[],int total,int n)
+{
+	bubble_sort(s,total,0);
+	int left=0,right=total-1,middle;
+	printf("Left\tMiddle\tRight\n");
+	while(left<=right)
+	{
+		middle=(left+right)/2;
+		printf("%d\t%d\t%d\t",left,middle,right);
+		if(s[middle].roll_no<n)
+		{
+			left=middle+1;
+			printf("Not found\n");
+		}
+		else if(s[middle].roll_no>n)
+		{
+			right=middle-1;
+			printf("Not found\n");
+		}
+		else
+		{
+			printf("Found\n");
+			printf("\n\n");
+			return middle;
+		}
+	}
+	return -1;
+}
+int recbinary(student s[], int left, int right,int total,int n)
+{
+	int middle;
+	printf("Left\tMiddle\tRight\n");
+	while(left<=right)
+	{
+		middle=(left+right)/2;
+		printf("%d\t%d\t%d\t",left,middle,right);
+		if(s[middle].roll_no<n)
+		{
+			left=middle+1;
+			printf("Not found\n");
+			recbinary(s,left,right,total,n);
+		}
+		else if(s[middle].roll_no>n)
+		{
+			right=middle-1;
+			printf("Not found\n");
+			recbinary(s,left,right,total,n);
+		}
+		else
+		{
+			printf("Found\n");
+			printf("\n\n");
+			return middle;
+		}
+	}
+	return -1;
+}
+void swap(int first,int second,student s[])
+{
+	student temp;
+	temp=s[first];
+	s[first]=s[second];
+	s[second]=temp;
+}

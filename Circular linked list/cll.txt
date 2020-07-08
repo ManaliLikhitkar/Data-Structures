@@ -1,0 +1,189 @@
+/*
+ ============================================================================
+                      Circular linked list
+ Assignment no. : 11
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+typedef struct
+{
+	int exp;
+	float coef;
+	struct node *next;
+}node;
+node * insert(float coef1,int exp1,node *head);
+node * getnode()
+{
+	node *temp;
+	temp=(node *)malloc(sizeof(node));
+	temp->next=NULL;
+	return temp;
+}
+node * create(node *head)
+{
+	int n,exp1;
+	float coef1;
+	printf("Enter the number of terms in polynomial : ");
+	scanf("%d",&n);
+	for(int i=1; i<=n; i++)
+	{
+		printf("Enter the coefficient: ");
+		scanf("%f",&coef1);
+		printf("Enter the exponent: ");
+		scanf("%d",&exp1);
+		head=insert(coef1,exp1,head);
+	}
+	return head;
+}
+node * insert(float coef1,int exp1,node *head)
+{
+	node *p,*t,*q,*s;
+	p=getnode();
+	p->exp=exp1;
+	p->coef=coef1;
+	if(head==NULL)
+    {
+        head=p;
+        head->next=head;
+        return head;
+    }
+    else if(exp1>head->exp)
+    {
+        p->next=head;
+        t=head;
+        while(t->next!=head)
+            t=t->next;
+        t->next=p;
+        head=p;
+        return head;
+    }
+    q=head;
+    s=q->next;
+    while(q->next!=head && exp1<=s->exp)
+    {
+        q=q->next;
+        s=q->next;
+    }
+
+    if(p->exp==q->exp)
+        q->coef+=coef1;
+    else
+    {
+       p->next=q->next;
+       q->next=p;
+    }
+    return head;
+}
+node * add(node *head1, node *head2)
+{
+    node *p,*head=NULL;
+    p=head1;
+    do
+    {
+       head=insert(p->coef,p->exp,head);
+       p=p->next;
+    }while(p!=head1);
+    p=head2;
+    do
+    {
+        head=insert(p->coef,p->exp,head);
+        p=p->next;
+    }while(p!=head2);
+    return head;
+}
+node * multiply(node *head1, node *head2)
+{
+    node *p1,*p2,*head=NULL;
+    p1=head1;
+    do
+    {
+        p2=head2;
+        do
+        {
+            head=insert(p2->coef*p1->coef, p2->exp+p1->exp, head);
+            p2=p2->next;
+        }while(p2!=head2);
+       p1=p1->next;
+    }while(p1!=head1);
+    return head;
+}
+void value(node *head)
+{
+    float val;
+    float sum=0.0;
+    node *temp=head;
+    printf("\n\nEnter the value of x:");
+    scanf("%f",&val);
+    while(temp->next!=head)
+    {
+        sum+=(temp->coef)*pow(val,temp->exp);
+        temp=temp->next;
+    }
+    sum+=(temp->coef)*pow(val,temp->exp);
+    printf("\n\nValue of ");
+    display(head);
+    printf(" at x=%f is : %f",val,sum);
+}
+void display(node *head)
+{
+	node *t;
+	t=head;
+	while(t->next!=head)
+	{
+	    printf("%fx^%d + ",t->coef,t->exp);
+		t=t->next;
+	}
+	printf("%fx^%d",t->coef,t->exp);
+}
+int main(void)
+{
+  int choice;
+  node *head1,*head2;
+  do
+  {
+      printf("\n\n1.Enter polynomials.\n2.Addition\n3.Multiplication\n4.Value of polynomial\n5.Exit.\n\nEnter your choice:");
+      scanf("%d",&choice);
+      switch(choice)
+      {
+      case 1:
+            head1=NULL; head2=NULL;
+            head1=create(head1);
+            printf("\n\n");
+            head2=create(head2);
+            break;
+      case 2:
+            {
+               node *head_add;
+               head_add=add(head1,head2);
+               printf("\n\nADDITION :\n");
+               display(head_add);
+            }
+            break;
+      case 3:
+            {
+              node *head_multiply;
+              head_multiply=multiply(head1,head2);
+              printf("\n\nMULTIPLICATION:\n");
+              display(head_multiply);
+            }
+            break;
+      case 4:
+           {
+              value(head1);
+              value(head2);
+           }
+            break;
+      case 5:
+            printf("\n\nTHANK YOU!!\n\n");
+            break;
+      default:
+            printf("\n\nEnter valid option!!\n\n");
+      }
+  }while(choice!=5);
+}

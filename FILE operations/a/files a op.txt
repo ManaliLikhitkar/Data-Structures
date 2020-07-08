@@ -1,0 +1,20 @@
+f11@c30415-OptiPlex-3010:~$ cd 23333
+f11@c30415-OptiPlex-3010:~/23333$ cd Files
+f11@c30415-OptiPlex-3010:~/23333/Files$ gcc filedis.c
+f11@c30415-OptiPlex-3010:~/23333/Files$ ./a.out source.txt
+manali
+f11@c30415-OptiPlex-3010:~/23333/Files$
+
+
+
+f11@c30415-OptiPlex-3010:~/23333/Files$ ^C
+f11@c30415-OptiPlex-3010:~/23333/Files$ gcc filecopy.c
+f11@c30415-OptiPlex-3010:~/23333/Files$ ./a.out source.txt dest.txt
+
+FILE COPIED SUCCESSFULLY
+f11@c30415-OptiPlex-3010:~/23333/Files$ 
+
+
+
+
+

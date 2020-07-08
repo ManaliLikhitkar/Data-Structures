@@ -1,0 +1,6 @@
+Accept input as a string and construct a Doubly Linked List for the input string
+with each node contains, as a data one character from the string and perform:
+d) Insert
+e) Delete,
+f) Display forward
+g) Display backward.

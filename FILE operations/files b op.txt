@@ -1,0 +1,148 @@
+Enter total no. of records
+2
+Enter the account holder name,phone number,account type,account balance,opening date 
+a
+123
+rd
+30
+12
+1
+1
+Enter the account holder name,phone number,account type,account balance,opening date 
+b
+1234
+fd
+40
+1
+1
+1
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+1
+1001 			 a 		 123 			 rd 			 30 			 12/1/1 
+1002 			 b 		 1234 			 fd 			 40 			 1/1/1 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+2
+Enter the account holder name,phone number,account type,account balance ,opening date
+c
+12345
+rd
+55
+2
+2
+2
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+3
+Enter the account number to be searched 
+1001
+Record found 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+3
+Enter the account number to be searched 
+1002
+Record found 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+3
+Enter the account number to be searched 
+1003
+Record found 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+3
+Enter the account number to be searched 
+1004
+Record not found 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+4
+Enter the account number whose record is to be modified 
+1002
+Enter the new account holder name,phone number,account type,account balance,opening date 
+b
+1234
+fd
+66
+3
+3
+3
+Updated successfully
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+1
+1001 			 a 		 123 			 rd 			 30 			 12/1/1 
+1002 			 b 		 1234 			 fd 			 66 			 3/3/3 
+1003 			 c 		 12345 			 rd 			 55 			 2/2/2 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+5
+Enter the account number whose record is to be deleted 
+1002
+Deleted successfully
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+1
+1001 			 a 		 123 			 rd 			 30 			 12/1/1 
+1003 			 c 		 12345 			 rd 			 55 			 2/2/2 
+1. Display records 
+2. Add record 
+3. Search record 
+4. Update record 
+5. Delete record 
+6. Exit 
+Enter your choice 
+6
+THANK YOU 

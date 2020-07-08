@@ -1,0 +1,215 @@
+/*
+ ============================================================================
+                       Singly linked list
+ Assignment no. : 9
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct
+{
+	int data;
+	struct node *next;
+}node;
+node * getnode()
+{
+	node *temp;
+	temp=(node *)malloc(sizeof(node));
+	printf("Enter data\n");
+	scanf("%d",&temp->data);
+	temp->next=NULL;
+	return temp;
+}
+node * create(node *head)
+{
+	node *temp, *t;
+	int n,i;
+	printf("Enter the number of elements in the list\n");
+	scanf("%d",&n);
+	temp=getnode();
+	if(head==NULL)
+		head=temp;
+	t=head;
+	for(i=1; i<n; i++)
+	{
+		t->next=getnode();
+		t=t->next;
+	}
+	return head;
+}
+void display(node *head)
+{
+	node *t;
+	t=head;
+	while(t->next!=NULL)
+	{
+	    printf("%d -> ",t->data);
+		t=t->next;
+	}
+    printf("%d",t->data);
+}
+node * insert_first(node *head)
+{
+	node *t;
+	t=getnode();
+	t->next=head;
+	head=t;
+	return head;
+}
+void insert_last(node *head)
+{
+	node *t=head;
+	while(t->next!=NULL)
+	{
+		t=t->next;
+	}
+	t->next=getnode();
+    t=t->next;
+	t->next=NULL;
+}
+void insert_between(node *head)
+{
+	int t,ch=0;
+	node *Head=head;
+	node *temp1=head;
+	printf("Enter data after which you want to insert a new node\n");
+		scanf("%d",&t);
+	if(temp1->data==t)
+		ch++;
+	else
+	while(temp1->next!=NULL)
+	{
+		temp1=temp1->next;
+		if(temp1->data==t)
+			ch++;
+	}
+	if(ch==0)
+		printf("Node not found\n");
+	else
+	{
+		node *temp=getnode();
+		while(Head->data!=t)
+		  Head=Head->next;
+		temp->next=Head->next;
+		Head->next=temp;
+	}
+
+}
+void printR(node *head)
+{
+	if(head!=NULL)
+	{
+		printR(head->next);
+		printf("%d -> ",head->data);
+	}
+}
+node * delete_between(node *head)
+{
+	int n;
+	printf("Enter the node to be deleted\n");
+	scanf("%d",&n);
+	node *p=head;
+	node *c=head;
+	if(head->data==n)
+	{
+       head->data=NULL;
+       head=head->next;
+       return head;
+	}
+	while(c->data!=n)
+	{
+		p=c;
+		c=c->next;
+	}
+	p->next=c->next;
+	c->next=NULL;
+	c->data=NULL;
+	return head;
+}
+node * reverse_list(node *head)
+{
+	node *current, *temp, *result;
+	temp=NULL;
+	result=NULL;
+	current=head;
+	if(head->next==NULL)
+		return head;
+	while(current!=NULL)
+	{
+	   temp=current->next;
+           current->next=result;
+	   result=current;
+	   current=temp;
+	}
+	head=result;
+	return head;
+}
+int main(void)
+{
+	int choice,ch;
+	struct node *head=NULL;
+	do
+	{
+		printf("\nEnter your choice\n1.Create list.\n2.Display list.\n3.Insert.\n4.Delete\n5.Reverse the list.\n6.Exit\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+		   case 1:
+			    head=create(head);
+			    break;
+		   case 2:
+			    if(head!=NULL)
+			    {
+			    	printf("\n1.Serially\n2.Reverse\n");
+					scanf("%d",&ch);
+					switch(ch)
+					{
+					  case 1:
+						  display(head);
+						  break;
+					  case 2:
+						  printR(head);
+						  break;
+					}
+			    }
+			    else
+			    	 printf("LIST EMPTY!!\n");
+			    break;
+		    case 3:
+                do
+                {
+                   printf("\n1.Beginning\n2.End\n3.Other\n4.End\n");
+                    scanf("%d",&ch);
+                    switch(ch)
+                    {
+                    case 1:
+                        head=insert_first(head);
+                        break;
+                    case 2:
+                        insert_last(head);
+                        break;
+                    case 3:
+                    	insert_between(head);
+                        break;
+                     }
+                }while(ch!=4);
+                break;
+		    case 4:
+		    	  if(head!=NULL)
+	                head=delete_between(head);
+		    	  else
+		    		  printf("LIST EMPTY!!\n");
+			      break;
+		    case 5:
+		    	head=reverse_list(head);
+			    break;
+		    case 6:
+			    printf("THANK YOU\n");
+			    break;
+		    default:
+			    printf("Enter correct choice.\n");
+		}
+	}while(choice!=6);
+}

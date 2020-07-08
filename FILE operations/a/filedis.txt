@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+                          FILES
+ASSIGNMENT NO.  : 5 (a)-display
+ROLL NO.        : 23254
+BATCH           : g10
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[])
+{
+	char c;
+	if(argc==2)
+	{
+		FILE *source=fopen(argv[1],"r");
+		while((c=getc(source))!=EOF)
+			printf("%c",c);
+                printf("\n");
+		fclose(source);
+	}
+	else
+		printf("INVALID ARGUMENTS!!!");
+
+	return EXIT_SUCCESS;
+}

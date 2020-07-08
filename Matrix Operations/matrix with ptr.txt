@@ -1,0 +1,232 @@
+/*
+ ============================================================================
+                  MATRIX OPERATIONS (WITH POINTERS)
+  Assignment no. : 2
+  Roll no.       : 23333
+  Batch          : F11
+ ============================================================================
+ */
+#include <stdio.h>
+#include <stdlib.h>
+int **create(int m,int n);
+void input(int **m,int r,int c);
+void display(int **m, int r, int c);
+void add(int **m1, int **m2, int r1, int c1, int **addn);
+void sub(int **m1, int **m2, int r1, int c1, int **addn);
+void trans(int **m,int r, int c, int **transpose);
+void multiply(int **m1,int **m2,int r1, int c1, int r2,int c2,int **mul);
+int saddle(int **m1,int r1,int c1);
+int main()
+{
+        int **p, **q;
+		int r1,r2,c1,c2,choice;
+		printf("Matrix 1:\n");
+		printf("Number of rows:"); scanf("%d",&r1);
+		printf("Number of columns:"); scanf("%d",&c1);
+		p=create(r1,c1);
+	    printf("Enter the elements of matrix:\n");
+			input(p,r1,c1);
+        printf("Matrix 2:\n");
+		printf("Number of rows:"); scanf("%d",&r2);
+		printf("Number of columns:"); scanf("%d",&c2);
+		q=create(r2,c2);
+	    printf("Enter the elements of matrix:\n");
+			input(q,r1,c1);
+    do
+    {
+        printf("\n\n1.Addition\n2.Subtraction\n3.Transpose\n4.Multiplication\n5.Saddle point\n6.Exit\n\nEnter your choice:");
+        scanf("%d", &choice);
+        printf("\n");
+	    switch(choice)
+	    {
+	      case 1:
+	      {
+	    	  int **addn;
+	    	  addn=create(r1,c1);
+	    	  if(r1==r2 && c1==c2)
+	    	  {
+	    		  add(p,q,r1,c1,addn);
+	    		  printf("ADDITION:\n");
+	    		  display(addn,r1,c1);
+	    	  }
+	    	  else
+	    		  printf("\nAddition cannot be performed\n");
+	    	  break;
+	      }
+	      case 2:
+		  {
+			 int **subn;
+	    	  subn=create(r1,c1);
+	    	  if(r1==r2 && c1==c2)
+	    	  {
+	    		  sub(p,q,r1,c1,subn);
+	    		  printf("SUBTRACTION:\n");
+	    		  display(subn,r1,c1);
+	    	  }
+	    	  else
+	    		  printf("\nSubtraction cannot be performed\n");
+	    	  break;
+		  }
+	      case 3:
+	      {
+	    	  int **transpose;
+	    	  transpose=create(c1,r1);
+	    	  trans(p,c1,r1,transpose);
+	    	  printf("\nTranspose of first matrix:\n");
+	    	  display(transpose,c1,r1);
+	    	  transpose=create(c2,r2);
+			  trans(q,c2,r2,transpose);
+			  printf("\nTranspose of second matrix: \n");
+			  display(transpose,c2,r2);
+			  break;
+	      }
+	      case 4:
+            {
+                int **mul;
+                mul=create(r1,c2);
+                if(c1==r2)
+                {
+                    printf("MULTIPLICATION:\n");
+                    multiply(p,q,r1,c1,r2,c2,mul);
+                    display(mul,r1,c2);
+                }
+                else
+                    printf("Multiplication cannot be performed \n");
+                break;
+            }
+          case 5:
+            {
+                int a,b;
+                a=saddle(p,r1,c1);
+                if(a==NULL)
+                    printf("No saddle point in first matrix \n");
+                else
+                    printf("Saddle point of first matrix is : %d \n",a);
+                b=saddle(q,r2,c2);
+                if(b==NULL)
+                    printf("No saddle point in second matrix \n");
+                else
+                    printf("Saddle point of second matrix is : %d \n",b);
+                    break;
+
+            }
+	      case 6:
+              printf("THANK YOU\n");
+              break;
+          default:
+              printf("Please enter correct choice.\n");
+	    }
+    }while(choice!=6);
+        return 0;
+}
+int **create(int m,int n)
+{
+    int **a,i;
+    a=(int **)malloc(m*sizeof(int *));
+    for(i=0;i<m;i++)
+        a[i]=(int *)malloc(n*sizeof(int));
+    return(a);
+}
+void input(int **m,int r,int c)
+{
+	int i, j;
+	for(i=0; i<r; i++)
+	{
+        for(j=0; j<c; j++)
+		{
+			scanf("%d", (*(m+i)+j));
+		}
+
+	}
+}
+void display(int **m, int r, int c)
+{
+	int i, j;
+	for(i=0; i<r; i++)
+	{
+		for(j=0; j<c; j++)
+		{
+			printf("%d    ",*(*(m+i)+j));
+		}
+		printf("\n");
+     }
+}
+void add(int **m1, int **m2, int r1, int c1, int **addn)
+{
+	int i, j;
+		for(i=0; i<r1; i++)
+		{
+	        for(j=0; j<c1; j++)
+			{
+				*(*(addn+i)+j)=*(*(m1+i)+j)+*(*(m2+i)+j);
+			}
+
+		}
+}
+void sub(int **m1, int **m2, int r1, int c1, int **addn)
+{
+	int i, j;
+		for(i=0; i<r1; i++)
+		{
+	        for(j=0; j<c1; j++)
+			{
+				*(*(addn+i)+j)=*(*(m1+i)+j)-*(*(m2+i)+j);
+			}
+
+		}
+}
+void trans(int **m,int r, int c, int **transpose)
+{
+	int i, j;
+			for(i=0; i<r; i++)
+			{
+		        for(j=0; j<c; j++)
+				{
+					*(*(transpose+i)+j)=*(*(m+j)+i);
+				}
+
+			}
+}
+void multiply(int **m1,int **m2,int r1, int c1, int r2,int c2,int **mul)
+{
+    int i,j,k;
+    for(i=0; i<r1; i++)
+    {
+       for(j=0; j<c2; j++)
+        {
+           *(*(mul+i)+j)=0;
+           for(k=0; k<c1; k++)
+           {
+               *(*(mul+i)+j)+=(*(*(m1+i)+k))*(*(*(m2+k)+j));
+           }
+        }
+    }
+}
+int saddle(int **m1,int r1,int c1)
+{
+    int i,j,k;
+    int a,b;
+      for (i=0; i<r1; i++)
+      {
+          a=*(*(m1+i)+0);
+          b=0;
+          for (j=1; j<r1; j++)
+          {
+              if (a>*(*(m1+i)+j))
+              {
+                  a=*(*(m1+i)+j);
+                  b=j;
+              }
+          }
+          for (k=0; k<r1; k++)
+          {
+              if(a<*(*(m1+k)+b))
+                break;
+          }
+          if (k==r1)
+          {
+           return a;
+          }
+      }
+    return NULL;
+}

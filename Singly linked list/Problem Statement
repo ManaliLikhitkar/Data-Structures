@@ -1,0 +1,6 @@
+Create a singly linked list with options:
+a) Insert (at front, at end, in the middle),
+b) Delete (at front, at end, in the middle),
+c) Display,
+d) Display Reverse,
+e) Revert the SLL

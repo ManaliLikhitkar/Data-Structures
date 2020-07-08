@@ -1,0 +1,89 @@
+Enter the number of rows and columns of first matrix
+3
+3
+Enter the number of rows and columns of second matrix
+3
+3
+Enter the first matrix
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Enter the second matrix
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+1
+| 2   4   6|
+| 8 10 12   |
+| 14 16 18 |
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+2
+| 0 0 0 |
+| 0 0 0 |
+| 0 0 0 |
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+3
+Transpose of first matrix:
+| 1 4 7 |
+| 2 5 8 |
+| 3 6 9 |
+Transpose of second matrix:
+| 1 4 7 |
+| 2 5 8 |
+| 3 6 9 |
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+4
+| 30 36 42 |
+| 66 81 96 |
+| 102 126 150 |
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+5
+Saddle point of first matrix is : 7
+Saddle point of second matrix is : 7
+Enter 1 for Addition
+Enter 2 for Subtraction
+Enter 3 for Transpose
+Enter 4 for Multiplication
+Enter 5 for Saddle point
+Enter 6 to Exit
+6
+THANK YOU

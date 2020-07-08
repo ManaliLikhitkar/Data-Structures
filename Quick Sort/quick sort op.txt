@@ -1,0 +1,217 @@
+Enter the total number of records.
+10
+
+Record number:1
+Name:a
+Mobile number:78564
+Bill amount:345
+Please enter correct mobile number
+Name:a
+Mobile number:7843076900
+Bill amount:345
+
+Record number:2
+Name:b
+Mobile number:7843076900
+Bill amount:124
+Enter unique mobile number
+Name:b
+Mobile number:9422046643
+Bill amount:244
+
+Record number:3
+Name:c
+Mobile number:9876543210
+Bill amount:234
+
+Record number:4
+Name:d
+Mobile number:1234567890
+Bill amount:2445
+
+Record number:5
+Name:e
+Mobile number:7843026862
+Bill amount:657
+
+Record number:6
+Name:f
+Mobile number:9000100001
+Bill amount:4546
+
+Record number:7
+Name:g
+Mobile number:7843079880
+Bill amount:678
+
+Record number:8
+Name:h
+Mobile number:7654321980
+Bill amount:786
+
+Record number:9
+Name:i
+Mobile number:9422046645
+Bill amount:456
+
+Record number:10
+Name:j
+Mobile number:9045090450
+Bill amount:5678
+
+
+Iteration number:1
+Number of comparisons:12
+Number of swaps:1
+Pivot position:0
+Pivot element:j
+j       9045090450      5678.000000
+b       9422046643      244.000000
+c       9876543210      234.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+h       7654321980      786.000000
+i       9422046645      456.000000
+a       7843076900      345.000000
+
+Iteration number:2
+Number of comparisons:11
+Number of swaps:0
+Pivot position:0
+Pivot element:j
+j       9045090450      5678.000000
+b       9422046643      244.000000
+c       9876543210      234.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+h       7654321980      786.000000
+i       9422046645      456.000000
+a       7843076900      345.000000
+
+Iteration number:3
+Number of comparisons:10
+Number of swaps:1
+Pivot position:1
+Pivot element:i
+j       9045090450      5678.000000
+i       9422046645      456.000000
+c       9876543210      234.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+h       7654321980      786.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:4
+Number of comparisons:9
+Number of swaps:0
+Pivot position:1
+Pivot element:i
+j       9045090450      5678.000000
+i       9422046645      456.000000
+c       9876543210      234.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+h       7654321980      786.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:5
+Number of comparisons:8
+Number of swaps:1
+Pivot position:2
+Pivot element:h
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:6
+Number of comparisons:7
+Number of swaps:0
+Pivot position:2
+Pivot element:h
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+d       1234567890      2445.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+g       7843079880      678.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:7
+Number of comparisons:6
+Number of swaps:1
+Pivot position:3
+Pivot element:g
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+g       7843079880      678.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+d       1234567890      2445.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:8
+Number of comparisons:5
+Number of swaps:0
+Pivot position:3
+Pivot element:g
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+g       7843079880      678.000000
+e       7843026862      657.000000
+f       9000100001      4546.000000
+d       1234567890      2445.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Iteration number:9
+Number of comparisons:4
+Number of swaps:1
+Pivot position:4
+Pivot element:f
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+g       7843079880      678.000000
+f       9000100001      4546.000000
+e       7843026862      657.000000
+d       1234567890      2445.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000
+
+Sorted list:
+j       9045090450      5678.000000
+i       9422046645      456.000000
+h       7654321980      786.000000
+g       7843079880      678.000000
+f       9000100001      4546.000000
+e       7843026862      657.000000
+d       1234567890      2445.000000
+c       9876543210      234.000000
+b       9422046643      244.000000
+a       7843076900      345.000000

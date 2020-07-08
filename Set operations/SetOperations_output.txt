@@ -1,0 +1,51 @@
+Enter the range of set
+3
+Enter the elements of set
+101
+Enter number that belongs to the universal set
+200
+Enter number that belongs to the universal set
+1
+2
+3
+Enter the range of set
+3
+Enter the elements of set
+4
+5
+6
+Enter 1 for intersection
+Enter 2 for union
+Enter 3 for difference
+Enter 4 for symmetric difference
+Enter 5 to exit
+Enter your choice
+1
+Intersection= null 
+Enter your choice
+2
+Union= 1
+2
+3
+4
+5
+6
+Enter your choice
+3
+SET1-SET2= 1
+2
+3
+SET2-SET1= 4
+5
+6
+Enter your choice
+4
+Symmetric Difference= 1
+2
+3
+4
+5
+6
+Enter your choice
+5
+Thank You

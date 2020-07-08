@@ -1,0 +1,76 @@
+
+
+1.Enter polynomials.
+2.Addition
+3.Multiplication
+4.Value of polynomial
+5.Exit.
+
+Enter your choice:1
+Enter the number of terms in polynomial : 2
+Enter the coefficient: 1
+Enter the exponent: 1
+Enter the coefficient: 1
+Enter the exponent: 2
+
+
+Enter the number of terms in polynomial : 2
+Enter the coefficient: 1
+Enter the exponent: 1
+Enter the coefficient: 1
+Enter the exponent: 2
+
+
+1.Enter polynomials.
+2.Addition
+3.Multiplication
+4.Value of polynomial
+5.Exit.
+
+Enter your choice:2
+
+
+ADDITION :
+2.000000x^2 + 2.000000x^1
+
+1.Enter polynomials.
+2.Addition
+3.Multiplication
+4.Value of polynomial
+5.Exit.
+
+Enter your choice:3
+
+
+MULTIPLICATION:
+1.000000x^4 + 2.000000x^3 + 1.000000x^2
+
+1.Enter polynomials.
+2.Addition
+3.Multiplication
+4.Value of polynomial
+5.Exit.
+
+Enter your choice:4
+
+
+Enter the value of x:2
+
+
+Value of 1.000000x^2 + 1.000000x^1 at x=2.000000 is : 6.000000
+
+Enter the value of x:3
+
+
+Value of 1.000000x^2 + 1.000000x^1 at x=3.000000 is : 12.000000
+
+1.Enter polynomials.
+2.Addition
+3.Multiplication
+4.Value of polynomial
+5.Exit.
+
+Enter your choice:5
+
+
+THANK YOU!!

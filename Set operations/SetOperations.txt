@@ -1,0 +1,258 @@
+/*
+ ============================================================================
+                        SET OPERATIONS
+ ASSI NO.    : 1 
+ ROLL NO.    : 23333
+ BATCH       : F11
+
+============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int input(int set[]);
+void display(int set[], int size);
+int itn(int set1[],int size1,int set2[], int size2, int intersection[]);
+int un(int set1[],int size1,int set2[], int size2, int unn[]);
+int diff(int set1[],int size1,int set2[], int size2, int dif[]);
+
+int main()
+{
+	int choice;
+	int set1[50];
+	int size1;
+	size1=input(set1);
+    int set2[50];
+    int size2;
+    size2=input(set2);
+    printf("Enter 1 for intersection");
+    printf("\n");
+    printf("Enter 2 for union");
+    printf("\n");
+    printf("Enter 3 for difference");
+    printf("\n");
+    printf("Enter 4 for symmetric difference");
+    printf("\n");
+    printf("Enter 5 to exit");
+    printf("\n");
+    while(choice!=5)
+    {
+    	printf("Enter your choice");
+    	printf("\n");
+        scanf("%d", &choice);
+    switch(choice)
+    {
+    case 1:
+             {
+            	  int intersection[50];
+            	  int sizei;
+            	  sizei=itn(set1, size1, set2, size2,intersection);
+            	  printf("Intersection= ");
+            	         	  if(sizei==0)
+            	         	        printf("null \n");
+            	         	  else
+            	                   display(intersection, sizei);
+            	  break;
+             }
+     case 2:
+         {
+        	  int unn[50];
+        	  int sizeu;
+        	  sizeu=un(set1, size1, set2, size2,unn);
+        	  printf("Union= ");
+        	  if(sizeu==0)
+        	        printf("null \n");
+        	  else
+        	        display(unn, sizeu);
+        	  break;
+         }
+     case 3:
+         {
+             	  int dif1[50];
+             	  int sized1;
+             	  sized1=diff(set1, size1, set2, size2,dif1);
+             	  printf("SET1-SET2= ");
+             	  if(sized1==0)
+             		  printf("null \n");
+             	  else
+             	     display(dif1, sized1);
+             	 int dif2[50];
+             	 int sized2;
+             	 sized2=diff(set2, size2, set1, size1,dif2);
+             	 printf("SET2-SET1= ");
+             	 if(sized2==0)
+             	     printf("null \n");
+             	 else
+             	     display(dif2, sized2);
+             	  break;
+         }
+     case 4:
+              {
+                  	  int dif1[50];
+                  	  int sized1;
+                  	  sized1=diff(set1, size1, set2, size2,dif1);
+
+                  	 int dif2[50];
+                  	 int sized2;
+                  	 sized2=diff(set2, size2, set1, size1,dif2);
+
+                  	 int sdif[50];
+                  	 int size;
+                  	 size=un(dif1, sized1,dif2, sized2,sdif);
+                  	 printf("Symmetric Difference= ");
+                  	 if(size==0)
+                  		 printf("null \n");
+                  	 else
+                  	     display(sdif,size);
+                  	  break;
+              }
+     case 5:
+    	 printf("Thank You");
+    	 break;
+     default:
+    	 printf("Enter a valid choice");
+    	 printf("\n");
+    	 continue;
+    }
+    }
+
+    return 0;
+}
+int input(int set[])
+{
+        int universal[100];
+        int n,i,j,f,k,c;
+        f=0;
+        c=1;
+        for(i=0; i<=99; i++)
+        {
+        	universal[i]=c;
+        	c++;
+        }
+		printf("Enter the range of set");
+		printf("\n");
+		scanf("%d", &n);
+		printf("Enter the elements of set");
+		printf("\n");
+		for(i=0; i<n; i++)
+	    {
+		   scanf("%d", &set[i]);
+				for(k=0; k<100; k++)
+				{
+					if(set[i]==universal[k])
+					{
+						f++;
+						break;
+					}
+				}
+				if(f==0)
+				{
+					i=i-1;
+					printf("Enter number that belongs to the universal set");
+                    printf("\n");
+				}
+				else
+				{
+					for(j=0; j<i; j++)
+									{
+										if(set[i]==set[j])
+										{
+											i=i-1;
+											printf("Enter unique element");
+											break;
+										}
+									}
+				}
+
+			}
+		return n;
+}
+void display(int set[],int size)
+{
+
+	 int i;
+	for(i=0; i<size; i++)
+	{
+		printf("%d",set[i]);
+		printf("\n");
+	}
+}
+int itn(int set1[],int size1,int set2[], int size2, int intersection[])
+{
+	int a,b,i,k;
+	int c=0;
+	 for(i=0; i<size1; i++)
+			   {
+				   a=set1[i];
+				   for(k=0;k<size2; k++)
+				   {
+					   b=set2[k];
+					   if(a==b)
+					   {
+						   intersection[c]=a;
+						   c++;
+
+					   }
+
+				   }
+			   }
+
+	 return c;
+}
+int un(int set1[],int size1,int set2[], int size2, int unn[])
+{
+	int a,b,i,k,f,j;
+	int c=0;
+	for(i=0; i<size1; i++)
+	{
+		unn[i]=set1[i];
+	}
+	c=size1;
+	for(i=0; i<size2; i++)
+    {
+		a=set2[i];
+		f=0;
+		for(j=0; j<c; j++)
+		{
+			b=unn[j];
+			if (a==b)
+			{
+			    f++;
+			    break;
+			}
+         }
+		if(f==0)
+	    {
+		    unn[c]=a;
+			c++;
+		}
+    }
+	return c;
+}
+int diff(int set1[],int size1,int set2[], int size2, int dif[])
+{
+  int c=0;
+  int i,f,a,b,j;
+  for(i=0; i<size1; i++)
+  		   {
+  		         f=0;
+  		         a=set1[i];
+  		         for(j=0; j<size2; j++)
+  		         {
+  		    	    b=set2[j];
+  		    	    if(a==b)
+  		    	    {
+  		    	    	f++;
+  		    	 	   break;
+
+  		    	    }
+  		          }
+  		          if(f==0)
+  		          {
+  		    	     dif[c]=a;
+  		    	     c++;
+  		          }
+  		    }
+  return c;
+}
+

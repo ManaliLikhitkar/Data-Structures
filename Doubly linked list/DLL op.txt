@@ -1,0 +1,189 @@
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:1
+
+
+Enter the string: manali
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:1
+
+
+m -> a -> n -> a -> l -> i
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:2
+
+
+i -> l -> a -> n -> a -> m
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:3
+Enter the character to be inserted : L
+
+1.Beginning.
+2.End.
+3.Other
+4.Stop.
+Enter your choice:1
+
+1.Beginning.
+2.End.
+3.Other
+4.Stop.
+Enter your choice:2
+
+1.Beginning.
+2.End.
+3.Other
+4.Stop.
+Enter your choice:3
+Enter the data after which you want to insert new node: j
+Data not found!!
+
+
+1.Beginning.
+2.End.
+3.Other
+4.Stop.
+Enter your choice:3
+Enter the data after which you want to insert new node: n
+
+1.Beginning.
+2.End.
+3.Other
+4.Stop.
+Enter your choice:4
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:1
+
+
+L -> m -> a -> n -> L -> a -> l -> i -> L
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:4
+Enter the data to be deleted : L
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:1
+
+
+m -> a -> n -> a -> l -> i
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:5
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:1
+
+
+i -> l -> a -> n -> a -> m
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:2
+
+1.Serially.
+2.Reverse.
+Enter your choice:2
+
+
+m -> a -> n -> a -> l -> i
+
+
+
+1.Create list.
+2.Display list.
+3.Insert node.
+4.Delete node.
+5.Reverse list.
+6.Exit.
+Enter your choice:6
+
+
+THANK YOU!!

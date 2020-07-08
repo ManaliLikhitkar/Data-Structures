@@ -1,0 +1,117 @@
+/* ==========================================================================
+                        Quick Sort
+ Assignment no. : 7
+ Roll no.       : 23333
+ Batch          : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include<string.h>
+typedef struct
+{
+	char name[20];
+	char mob[11];
+	float bill_amt;
+}user;
+void input(user u[],int total);
+void display(user u[],int total);
+void quick_sort(user u[],int left,int right,int total);
+void swap(user u[],int first,int second);
+int main()
+{
+	setvbuf( stdout, NULL, _IONBF, 0 );
+	int total;
+	user u[50];
+	printf("Enter the total number of records.\n");
+	scanf("%d",&total);
+	input(u,total);
+	quick_sort(u,0,total-1,total);
+	printf("Sorted list:\n");
+	display(u,total);
+}
+void input(user u[],int total)
+{
+	int i,j,flag=0;
+	for(i=0; i<total; i++)
+	{
+	    do
+        {
+           flag=0;
+           printf("Enter the name, mobile number and bill amount of user.\n");
+           scanf("\n");
+           gets(u[i].name);
+           scanf("%s%f",u[i].mob,&u[i].bill_amt);
+           int l=strlen(u[i].mob);
+           if(l!=10)
+           {
+                printf("Please enter correct mobile number\n");
+                flag=1;
+           }
+           if(flag==0)
+           {
+        	   for(j=0;j<i; j++)
+        	   {
+        		   if(strcmp(u[i].mob,u[j].mob)==0)
+        		   {
+        			   printf("Enter unique mobile number\n");
+        			   flag=1;
+        		   }
+        	   }
+           }
+        }while(flag==1);
+	}
+}
+void display(user u[],int total)
+{
+	int i;
+	for(i=0; i<total; i++)
+	{
+		printf("%s\t%s\t%f\n",u[i].name,u[i].mob,u[i].bill_amt);
+	}
+}
+void quick_sort(user u[],int left,int right,int total)
+{
+	char pivot[20];
+	int i,j,comp=0;
+	static int it=0;
+	if(left<right)
+	{
+		i=left;
+		j=right+1;
+		strcpy(pivot,u[left].name);
+		do
+		{
+			do
+			{
+				i++;
+				comp++;
+			}while(strcmp(u[i].name,pivot)>0);
+			do
+			{
+				j--;
+				comp++;
+			}while(strcmp(u[j].name,pivot)<0);
+		    if(i<j)
+		    	swap(u,i,j);
+		    comp++;
+		}while(i<j);
+		swap(u,left,j);
+		printf("Iteration number:%d\n",it+1);
+		it++;
+		printf("Number of comparisons:%d\n",comp);
+		display(u,total);
+		printf("\n");
+	    quick_sort(u,left,j-1,total);
+	    quick_sort(u,j+1,right,total);
+	}
+}
+void swap(user u[],int first,int second)
+{
+	user temp;
+	temp=u[first];
+	u[first]=u[second];
+	u[second]=temp;
+}

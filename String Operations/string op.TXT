@@ -1,0 +1,78 @@
+Enter the string 
+dad dad
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+1
+Length of the string is: 7
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+2
+Source string: dad dad
+Destination string: dad dad
+Successfully copied 
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+3
+Enter the string 
+dad
+First string is below the second string alphabetically 
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+4
+Reverse of the string is: dad dad 
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+5
+Pallindrome 
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+6
+Enter the string 
+dad
+The string is present 2 times 
+1. Length 
+2. Copy 
+3. Compare 
+4. Reverse 
+5. Pallindrome 
+6. Substring 
+7. Exit 
+Enter your choice 
+7
+THANK YOU 

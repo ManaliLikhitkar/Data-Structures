@@ -1,0 +1,35 @@
+/*
+ ============================================================================
+                          FILES
+ASSIGNMENT NO.  : 5 (a)-copy
+ROLL NO.        : 23333
+BATCH           : F11
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char* argv[])
+{
+	if(argc==3)
+	{
+		FILE *source,*dest;
+		source=fopen(argv[1],"r");
+		dest=fopen(argv[2],"w");
+		char c;
+		while((c=getc(source))!=EOF)
+		{
+			putc(c,dest);
+		}
+		printf("\nFILE COPIED SUCCESSFULLY\n");
+		fclose(source);
+		fclose(dest);
+	}
+	else
+	{
+		printf("INVALID ARGUMENTS!!!\n");
+		exit(-1);
+	}
+	return EXIT_SUCCESS;
+}
