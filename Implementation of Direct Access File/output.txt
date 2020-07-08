@@ -1,0 +1,299 @@
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 1 ::
+
+Enter Name : a
+
+Enter Roll No : 19
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 56
+Enter Maths Marks : 65
+Enter Chemistry Marks : 75
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 2 ::
+
+Enter Name : b
+
+Enter Roll No : 23
+
+Enter class : 
+2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 65
+Enter Maths Marks : 56
+Enter Chemistry Marks : 78
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 3 ::
+
+Enter Name : c
+
+Enter Roll No : 24
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 9
+Enter Maths Marks : 9
+Enter Chemistry Marks : 9
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 4 ::
+
+Enter Name : d
+
+Enter Roll No : 29
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 10
+Enter Maths Marks : 11
+Enter Chemistry Marks : 12
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 5 ::
+
+Enter Name : e
+
+Enter Roll No : 53
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 98
+Enter Maths Marks : 15
+Enter Chemistry Marks : 96
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 6 ::
+
+Enter Name : f
+
+Enter Roll No : 100
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 65
+Enter Maths Marks : 89
+Enter Chemistry Marks : 32
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 1
+
+ :: RECORD 7 ::
+
+Enter Name : g
+
+Enter Roll No : 191
+
+Enter class : 2
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 96
+Enter Maths Marks : 96
+9Enter Chemistry Marks : 6
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 2
+
+	                     |        MARKS       |
+Location Name Roll_No Class Percentage Physics Maths Chemistry Flag Next_Link
+
+0         d             29      2     11         10      11    12        1    -1  
+      
+1         f            100     2     62         65      89    32        1    -1
+        
+2         g            191     2     96         96      96    96        1    -1 
+       
+3         b             23      2     66.3       65      56    78        1    5
+         
+4         c              24      2     9          9       9     9         1    -1
+        
+5         e            53      2     69.7       98      15    96        1    -1
+        
+6         NULL           -1      -1    0          -1      -1    -1        -1   -1    
+    
+7         NULL           -1      -1    0          -1      -1    -1        -1   -1
+        
+8         NULL           -1      -1    0          -1      -1    -1        -1   -1        
+
+9        a              19      2     65.3       56      65    75        1    0         
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 3
+
+ Enter Roll No Of Record To Be Modified : 100
+
+	 RECORD FOUND SUCCESSFULLY 
+
+Enter Name : d
+
+Enter Roll No : 100
+
+Enter class : 8
+
+Enter Marks (out of 100) 
+Enter Physics Marks : 100
+Enter Maths Marks : 100
+Enter Chemistry Marks : 100
+
+
+NEW DETAILS :
+
+Name: d
+Roll No: 100
+Class: 8
+Percentage: 100
+Physics = 100
+Maths = 100
+Chemistry = 100
+
+	 RECORD MODIFIED SUCCESSFULLY 	 
+	 
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 2
+
+	                |   MARKS    |
+Location Name	Roll_No Class Percentage Physics Maths Chemistry Flag Next_Link
+
+0         d             29      2     11         10      11    12        1    -1        
+
+1         f            100     2     62         65      89    32        1    -1        
+
+2         g            191     2     96         96      96    96        1    -1        
+
+3         b             23      2     66.3       65      56    78        1    5         
+
+4         c              24      2     9          9       9     9         1    -1        
+
+5         e            53      2     69.7       98      15    96        1    -1        
+
+6         NULL           -1      -1    0          -1      -1    -1        -1   -1    
+    
+7         NULL           -1      -1    0          -1      -1    -1        -1   -1        
+
+8         NULL           -1      -1    0          -1      -1    -1        -1   -1      
+  
+9         a        19      2     65.3       56      65    75        1    0 
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 4
+
+ Enter Roll No Of Record To Be searched : 191
+
+	 RECORD FOUND SUCCESSFULLY 
+Name: 191
+Roll No: 191
+Class: 2
+Percentage: 96
+Physics = 96
+Maths = 96
+Chemistry = 96
+
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 
+5
+
+TEXT FILE CREATED SUCCESSFULLY
+
+ 
+
+Enter 0 to Exit 
+Enter 1 to Add Data/Record 
+Enter 2 to Display Data 
+Enter 3 to Modify Data  
+Enter 4 to Search Record 
+Enter 5 to Convert To Text File 
+Enter Your Choice : 0
+

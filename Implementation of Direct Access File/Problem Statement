@@ -1,0 +1,7 @@
+Implement direct access file using hashing (chaining without replacement) and
+perform following operations on it
+a. Create Database
+b. Display Database
+c. Add a record
+d. Search a record
+e. Modify a record

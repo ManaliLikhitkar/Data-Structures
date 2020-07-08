@@ -1,0 +1,209 @@
+Create Network :-
+Enter the total number of people : 5
+
+
+Record no. 1
+Name : manali
+Date of Birth
+        Day : 18
+        Month : 6
+        Year : 99
+Number of comments : 78
+
+
+Record no. 2
+Name : mansi
+Date of Birth
+        Day : 18
+        Month : 2
+        Year : 99
+Number of comments : 45
+
+
+Record no. 3
+Name : gauri
+Date of Birth
+        Day : 15
+        Month : 6
+        Year : 99
+Number of comments : 66
+
+
+Record no. 4
+Name : atharva
+Date of Birth
+        Day : 4
+        Month : 8
+        Year : 99
+Number of comments : 90
+
+
+Record no. 5
+Name : harsh
+Date of Birth
+        Day : 25
+        Month : 3
+        Year : 95
+Number of comments : 55
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 2
+manali
+mansi
+gauri
+atharva
+harsh
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 1
+Enter name of first friend:     manali
+Enter name of second friend:    mansi
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 1
+Enter name of first friend:     gauri
+Enter name of second friend:    harsh
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 1
+Enter name of first friend:     manali
+Enter name of second friend:    atharva
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 1
+Enter name of first friend:     manali
+Enter name of second friend:    harsh
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 2
+
+
+manali->mansi->atharva->harsh
+mansi->manali
+gauri->harsh
+atharva->manali
+harsh->gauri->manali
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 3
+
+Minimum no. of comments : mansi( 45 comments)
+Maximum no. of comments : atharva( 90 comments)
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 4
+
+manali has max friends, i.e. 3
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 5
+
+Enter the month : 3
+
+Following people have birthday in current month :
+harsh
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 5
+
+Enter the month : 6
+
+Following people have birthday in current month :
+manali
+gauri
+
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 5
+
+Enter the month : 13
+Following people have birthday in current month :
+
+No birthdays in current month!!
+
+MENU
+1.Insert Friends
+2.Display network
+3.Maximum and minimum no. of comments
+4.Maximum no. of friends
+5.Birthday in current month
+6.Exit
+Enter your choice : 6
+
+
+THANK YOU!!

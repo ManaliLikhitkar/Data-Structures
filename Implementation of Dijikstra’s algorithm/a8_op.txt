@@ -1,0 +1,32 @@
+
+Enter total vertices in the graph:      4
+
+Enter name:     a
+
+Enter name:     b
+
+Enter name:     c
+
+Enter name:     d
+
+
+How many edges to enter?        4
+Enter name of first Vertex:     a
+Enter name of second Vertex:    b
+Enter weight of edge:   10
+Enter name of first Vertex:     b
+Enter name of second Vertex:    c
+Enter weight of edge:   40
+Enter name of first Vertex:     c
+Enter name of second Vertex:    d
+Enter weight of edge:   6
+Enter name of first Vertex:     d
+Enter name of second Vertex:    a
+Enter weight of edge:   7
+
+Enter name of vertex from which distances are needed:   a
+
+Start Vertex:   a
+b       10
+c       13
+d       7

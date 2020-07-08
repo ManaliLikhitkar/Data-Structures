@@ -1,0 +1,147 @@
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+1
+Enter number of Records you want to add:3
+Enter Student name:     manali
+Enter Age:      19
+Enter Marks:    80
+Enter Division: 11
+Done
+
+Enter Student name:     atharva
+Enter Age:      19
+Enter Marks:    90
+Enter Division: 11
+Done
+
+Enter Student name:     mansi
+Enter Age:      19
+Enter Marks:    75
+Enter Division: 11
+Done
+
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+2
+--------------------------------------------------
+|Student Name             |Age |Division |Marks  |
+--------------------------------------------------
+|manali                   |19  |11       |80     |
+|atharva                  |19  |11       |90     |
+|mansi                    |19  |11       |75     |
+--------------------------------------------------
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+3
+Enter Name to be searched:      mansi
+
+Record Found!
+
+--------------------------------------------------
+|Student Name             |Age |Division |Marks  |
+--------------------------------------------------
+|mansi                    |19  |11       |75     |
+--------------------------------------------------
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+4
+Enter Name to be modified:      manali
+
+Record Found!
+
+--------------------------------------------------
+|Student Name             |Age |Division |Marks  |
+--------------------------------------------------
+|manali                   |19  |11       |80     |
+--------------------------------------------------
+
+Enter marks:    88
+
+Enter Age:      19
+
+Enter Division: 11
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+2
+--------------------------------------------------
+|Student Name             |Age |Division |Marks  |
+--------------------------------------------------
+|manali                   |19  |11       |88     |
+|atharva                  |19  |11       |90     |
+|mansi                    |19  |11       |75     |
+--------------------------------------------------
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+5
+Enter Name to be deleted:       atharva
+
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+2
+--------------------------------------------------
+|Student Name             |Age |Division |Marks  |
+--------------------------------------------------
+|manali                   |19  |11       |88     |
+|mansi                    |19  |11       |75     |
+--------------------------------------------------
+
+Student Data Base
+ 1.Add Data
+ 2.Display all records
+ 3.search for a record
+ 4.Modify a record
+ 5.delete a record
+ 6.Exit
+
+6
+
+THANK YOU

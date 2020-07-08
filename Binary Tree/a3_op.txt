@@ -1,0 +1,131 @@
+Enter data (# for no data) : a
+Enter left child of a
+Enter data (# for no data) : b
+Enter left child of b
+Enter data (# for no data) : #
+Enter right child of b
+Enter data (# for no data) : d
+Enter left child of d
+Enter data (# for no data) : #
+Enter right child of d
+Enter data (# for no data) : #
+Enter right child of a
+Enter data (# for no data) : c
+Enter left child of c
+Enter data (# for no data) : #
+Enter right child of c
+Enter data (# for no data) : #
+
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 2
+
+          c
+a
+                    d
+          b
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 3
+
+
+Depth of the tree is : 3
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 4
+d       c
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 5
+Tree copied!!
+New tree:
+
+          c
+a
+                    d
+          b
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 1
+Enter 1 to insert at left of a, 2 to insert at right of a :1
+Enter 1 to insert at left of b, 2 to insert at right of b :1
+Enter data : e
+
+Inserted successfully!
+
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 2
+
+          c
+a
+                    d
+          b
+                    e
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 3
+
+
+Depth of the tree is : 3
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 4
+e       d       c
+
+MENU:
+1.Insert
+2.Display
+3.Depth of a tree
+4.Display leaf-nodes
+5.Create a copy of tree
+6.Exit
+Enter your choice : 6

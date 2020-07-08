@@ -1,0 +1,159 @@
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 1
+
+Enter the number of records to be added:3
+
+Record no. 1
+Enter name : manali
+Enter disease (heart/accident/general) : accident
+Enter phone number : 9999999999
+
+Record no. 2
+Enter name : mansi
+Enter disease (heart/accident/general) : general
+Enter phone number : 8888888888
+
+Record no. 3
+Enter name : gauri
+Enter disease (heart/accident/general) : heart
+Enter phone number : 9888877777
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 3
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+1               manali          accident                9999999999
+2               mansi           general         8888888888
+3               gauri           heart           9888877777
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 2
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+3               gauri           heart           9888877777
+
+
+Patient Served!!
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 3
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+1               manali          accident                9999999999
+2               mansi           general         8888888888
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 2
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+1               manali          accident                9999999999
+
+
+Patient Served!!
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 2
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+2               mansi           general         8888888888
+
+
+Patient Served!!
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 2
+
+
+Queue empty!!
+PLease enter records!!
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 1
+
+Enter the number of records to be added:2
+
+Record no. 1
+Enter name : manali
+Enter disease (heart/accident/general) : heart
+Enter phone number : 7843076900
+
+Record no. 2
+Enter name : mansi
+Enter disease (heart/accident/general) : 7866666666
+Enter phone number : 7655555555
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 3
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+4               manali          heart           7843076900
+5               mansi           7866666666              7655555555
+
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 2
+
+
+ID              NAME            DISEASE         PHONE NUMBER
+
+4               manali          heart           7843076900
+
+
+Patient Served!!
+
+1.Add records
+2.Serve patients
+3.Display
+4.Exit
+Enter your choice : 4
+
+
+THANK YOU!!

@@ -1,0 +1,127 @@
+
+Enter total vertices in the graph : 4
+
+Enter name : a
+
+Enter name : b
+
+Enter name : c
+
+Enter name : d
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 2
+
+Enter name of first Vertex:     a
+
+Enter name of second Vertex:    b
+
+Enter weight of edge:   10
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 2
+
+Enter name of first Vertex:     b
+
+Enter name of second Vertex:    c
+
+Enter weight of edge:   13
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 2
+
+Enter name of first Vertex:     c
+
+Enter name of second Vertex:    d
+
+Enter weight of edge:   7
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 2
+
+Enter name of first Vertex:     d
+
+Enter name of second Vertex:    a
+
+Enter weight of edge:   4
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 2
+
+Enter name of first Vertex:     a
+
+Enter name of second Vertex:    c
+
+Enter weight of edge:   8
+
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 3
+a -- 10 > b -- 4 > d -- 8 > c
+|
+b -- 10 > a -- 13 > c
+|
+c -- 13 > b -- 7 > d -- 8 > a
+|
+d -- 7 > c -- 4 > a
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 4
+
+        Minimum Spanning Tree:
+
+b       a       10
+c       a       8
+d       c       7
+d       a       4
+
+Menu:
+1.Insert Vertex
+2.Insert Edge
+3.Display Adjacency List
+4.Minimum Spanning Tree
+5.Exit
+Enter your choice : 5
+
+
+THANK YOU!!

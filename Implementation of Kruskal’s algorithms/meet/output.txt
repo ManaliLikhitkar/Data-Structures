@@ -1,0 +1,54 @@
+Enter the no. of users:3
+Enter your name.:Meet
+Enter your name.:Uddhav
+Enter your name.:Aditya
+
+                MENU:
+                1.Insert user
+                2.Add friends
+                3.Display users
+                4.Minimum spanning tree
+                5.Exit
+Enter the correct choice.:1
+Enter your name.:Satyam
+
+                MENU:
+                1.Insert user
+                2.Add friends
+                3.Display users
+                4.Minimum spanning tree
+                5.Exit
+Enter the correct choice.:2
+Enter the no. of friendship pairs you want to add:4
+Enter the first name:Meet
+Enter the second name:Uddhav
+Enter the weight of the edge.:10
+Enter the first name:Meet
+Enter the second name:Aditya
+Enter the weight of the edge.:15
+Enter the first name:Meet
+Enter the second name:Satyam
+Enter the weight of the edge.:13
+Enter the first name:Aditya
+Enter the second name:Satyam
+Enter the weight of the edge.:5
+
+                MENU:
+                1.Insert user
+                2.Add friends
+                3.Display users
+                4.Minimum spanning tree
+                5.Exit
+Enter the correct choice.:4
+Uddhav<--->Meet 		  10
+Satyam<--->Meet 		  13
+Satyam<--->Aditya       5
+
+                MENU:
+                1.Insert user
+                2.Add friends
+                3.Display users
+                4.Minimum spanning tree
+                5.Exit
+Enter the correct choice.:5
+Thank you

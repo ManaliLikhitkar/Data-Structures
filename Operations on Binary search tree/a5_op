@@ -1,0 +1,184 @@
+CREATE BINARY SEARCH TREE:-
+Enter data (# for no data) : 5
+Enter data (# for no data) : 1
+Enter data (# for no data) : 4
+Enter data (# for no data) : 9
+Enter data (# for no data) : 7
+Enter data (# for no data) : #
+
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 6
+
+          9
+                    7
+5
+                    4
+          1
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 4
+
+
+Mirror image of the tree:
+9  7  5  4  1  
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 6
+
+          9
+                    7
+5
+                    4
+          1
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 1
+Enter data (# for no data) : 8
+
+          9
+                              8
+                    7
+5
+                    4
+          1
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 2
+
+Enter data to delete:	5
+
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 6
+
+          9
+                    8
+7
+                    4
+          1
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 2
+
+Enter data to delete:	4
+
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 2
+
+Enter data to delete:	9
+
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 6
+
+          8
+7
+          1
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 3
+
+
+Enter the data to be searched : 5
+
+Data not found!!
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 3
+
+
+Enter the data to be searched : 1
+
+Data found!!
+
+MENU:
+1.Insert
+2.Delete
+3.Search
+4.Mirror image
+5.Display
+6.Display level wise
+7.Exit
+Enter your choice : 7
+
+
+THANK YOU!!

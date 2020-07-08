@@ -1,0 +1,100 @@
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 1
+Enter expression: a(b-c)
+Enter valid expression!!
+
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 1
+Enter expression: a^b^c
+Postfix expression : abc^^
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 1
+Enter expression: a/(b+c)*d
+Postfix expression : abc+/d*
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 2
+Enter expression: a^b^c
+Prefix expression : ^^abc
+
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 2
+Enter expression: a/(b+c)*d
+Prefix expression : */a+bcd
+
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 3
+Enter expression: a*b^c+d
+
+
+Postfix expression : abc^*d+
+Enter the value of a:3
+Enter the value of b:2
+Enter the value of c:2
+Enter the value of d:4
+
+Answer : 16
+
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 4
+Enter expression: a*b^c+d
+
+
+Prefix expression : +*a^bcd
+Enter the value of d:4
+Enter the value of c:2
+Enter the value of b:2
+Enter the value of a:3
+
+Answer:16
+
+
+MENU
+1.Infix to postfix conversion
+2.Infix to prefix conversion
+3.Postfix evaluation
+4.Prefix evaluation
+5.Exit
+Enter your choice: 5
+THANK YOU!!

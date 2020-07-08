@@ -1,0 +1,230 @@
+	MENU
+		1.Enter Adjecency list
+		2.Display graph
+		3.Prim
+		4.Display minimum spanning tree
+		5.Re_Enter
+		6.Exit
+Enter Choice : 1
+
+Enter number of cities : 7
+
+Enter name of city no. 1 : 
+
+Enter Name : a
+
+
+Enter name of city no. 2 : 
+
+Enter Name : b
+
+
+Enter name of city no. 3 : 
+
+Enter Name : c
+
+
+Enter name of city no. 4 : 
+
+Enter Name : d
+
+
+Enter name of city no. 5 : 
+
+Enter Name : e
+
+
+Enter name of city no. 6 : 
+
+Enter Name : f
+
+
+Enter name of city no. 7 : 
+
+Enter Name : g
+
+
+Enter Name of city no. 1 connected to a : b
+
+Enter distance between these cities : 7
+
+More cities connected?(Y/N) to a : y
+
+Enter name of city  no. 2 : d
+
+Enter distance between these cities : 5
+
+More cities connected?(Y/N)? to a : n
+
+Enter Name of city no. 1 connected to b : a
+
+Enter distance between these cities : 7
+
+More cities connected?(Y/N) to b : y
+
+Enter name of city  no. 2 : d
+
+Enter distance between these cities : 9
+
+More cities connected?(Y/N)? to b : y
+
+Enter name of city  no. 3 : c
+
+Enter distance between these cities : 8
+
+More cities connected?(Y/N)? to b : y
+
+Enter name of city  no. 4 : e
+
+Enter distance between these cities : 7
+
+More cities connected?(Y/N)? to b : n
+
+Enter Name of city no. 1 connected to c : b
+
+Enter distance between these cities : 8
+
+More cities connected?(Y/N) to c : y
+
+Enter name of city  no. 2 : e
+
+Enter distance between these cities : 5
+
+More cities connected?(Y/N)? to c : n
+
+Enter Name of city no. 1 connected to d : a
+
+Enter distance between these cities : 5
+
+More cities connected?(Y/N) to d : y
+
+Enter name of city  no. 2 : b
+
+Enter distance between these cities : 9
+
+More cities connected?(Y/N)? to d : y
+
+Enter name of city  no. 3 : e
+
+Enter distance between these cities : 15
+
+More cities connected?(Y/N)? to d : y
+
+Enter name of city  no. 4 : f
+
+Enter distance between these cities : 6
+
+More cities connected?(Y/N)? to d : n
+
+Enter Name of city no. 1 connected to e : b
+
+Enter distance between these cities : 7
+
+More cities connected?(Y/N) to e : y
+
+Enter name of city  no. 2 : c
+
+Enter distance between these cities : 5
+
+More cities connected?(Y/N)? to e : y
+
+Enter name of city  no. 3 : d
+
+Enter distance between these cities : 15
+
+More cities connected?(Y/N)? to e : y
+
+Enter name of city  no. 4 : f
+
+Enter distance between these cities : 8
+
+More cities connected?(Y/N)? to e : y
+
+Enter name of city  no. 5 : g
+
+Enter distance between these cities : 9
+
+More cities connected?(Y/N)? to e : n
+
+Enter Name of city no. 1 connected to f : d
+
+Enter distance between these cities : 6
+
+More cities connected?(Y/N) to f : y
+
+Enter name of city  no. 2 : e
+
+Enter distance between these cities : 8
+
+More cities connected?(Y/N)? to f : y
+
+Enter name of city  no. 3 : g
+
+Enter distance between these cities : 11
+
+More cities connected?(Y/N)? to f : n
+
+Enter Name of city no. 1 connected to g : e
+
+Enter distance between these cities : 9
+
+More cities connected?(Y/N) to g : y
+
+Enter name of city  no. 2 : f
+
+Enter distance between these cities : 11
+
+More cities connected?(Y/N)? to g : n
+
+	MENU
+		1.Enter Adjecency list
+		2.Display graph
+		3.Prim
+		4.Display minimum spanning tree
+		5.Re_Enter
+		6.Exit
+Enter Choice : 2
+
+a<- b<- d
+b<- a<- d<- c<- e
+c<- b<- e
+d<- a<- b<- e<- f
+e<- b<- c<- d<- f<- g
+f<- d<- e<- g
+g<- e<- f
+NULL
+	MENU
+		1.Enter Adjecency list
+		2.Display graph
+		3.Prim
+		4.Display minimum spanning tree
+		5.Re_Enter
+		6.Exit
+Enter Choice : 3
+
+	MENU
+		1.Enter Adjecency list
+		2.Display graph
+		3.Prim
+		4.Display minimum spanning tree
+		5.Re_Enter
+		6.Exit
+Enter Choice : 4
+
+     a ::   <- b( 7 )  <- d( 5 )
+     b ::   <- e( 7 )
+     c :: 
+     d ::   <- f( 6 )
+     e ::   <- c( 5 )  <- g( 9 )
+     f :: 
+     g :: 
+Min dist : 39
+
+	MENU
+		1.Enter Adjecency list
+		2.Display graph
+		3.Prim
+		4.Display minimum spanning tree
+		5.Re_Enter
+		6.Exit
+Enter Choice : 6

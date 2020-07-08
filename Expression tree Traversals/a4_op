@@ -1,0 +1,93 @@
+MENU:
+1.Create tree
+2.Recursive traversal
+3.Non-recursive traversal
+4.Exit
+Enter your choice : 1
+Enter the expression in postfix form : ab+d*
+
+
+MENU:
+1.Create tree
+2.Recursive traversal
+3.Non-recursive traversal
+4.Exit
+Enter your choice : 2
+
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 1
+a+b*d
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 2
+*+abd
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 3
+ab+d*
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 4
+
+
+Returning to main menu!!
+
+MENU:
+1.Create tree
+2.Recursive traversal
+3.Non-recursive traversal
+4.Exit
+Enter your choice : 3
+
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 1
+a+b*d
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 2
+*+abd
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 3
+ab+d*
+
+1.Inorder
+2.Preorder
+3.Postorder
+4.Main menu
+Enter your choice : 4
+
+
+Returning to main menu!!
+
+MENU:
+1.Create tree
+2.Recursive traversal
+3.Non-recursive traversal
+4.Exit
+Enter your choice : 4
+
+THANK YOU!!
